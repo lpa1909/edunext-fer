@@ -1,0 +1,53 @@
+.header {
+  width: calc(100% - 200px); /* Adjust width based on sidebar width */
+  margin-left: 200px; /* Align with sidebar */
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  background-color: transparent;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  color: #000;
+}
+
+.tab.active {
+  border-bottom: 2px solid blue;
+  color: blue;
+}
+
+.semester-dropdown {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.semester-dropdown label {
+  margin-right: 10px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.semester-dropdown select {
+  padding: 5px;
+  font-size: 16px;
+}
+
+.recently-updated {
+  color: blue;
+  font-size: 14px;
+  cursor: pointer;
+}

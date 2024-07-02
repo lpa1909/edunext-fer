@@ -1,0 +1,16 @@
+.course-list {
+  padding: 20px;
+  
+}
+
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.course-card {
+  flex: 1 1 250px;
+  
+  margin-bottom: 20px;
+}
