@@ -1,0 +1,28 @@
+import React from 'react';
+import '../Css/Header.css';
+
+const Header = () => {
+  return (
+    <div className="header">
+      <div className="header-top">
+        <div className="tabs">
+          <button className="tab active">COURSE</button>
+          <button className="tab">PROJECT</button>
+        </div>
+        <div className="semester-dropdown">
+          <label htmlFor="semester">SEMESTER</label>
+          <select id="semester" name="semester">
+            <option value="SUMMER2024">SUMMER2024</option>
+            <option value="FALL2024">FALL2024</option>
+            <option value="WINTER2024">WINTER2024</option>
+          </select>
+        </div>
+      </div>
+      <p className="recently-updated">
+        Recently Updated (Để xem chi tiết về các thay đổi cập nhật gần đây, vui lòng nhấp vào đây)
+      </p>
+    </div>
+  );
+};
+
+export default Header;
