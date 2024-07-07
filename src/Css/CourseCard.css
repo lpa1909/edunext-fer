@@ -1,44 +1,41 @@
+/* course-card.css or in your main CSS file */
+
+.course-container {
+  display: flex; /* Arrange cards horizontally */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  gap: 20px; /* Space between cards */
+}
+
 .course-card {
-  background-color: #fff;
-  border: 1px solid #ccc;
+  border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  margin: 10px;
-  width: 250px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  width: 250px;  /* Adjust card width as needed */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.course-card:hover {
-  transform: scale(1.05);
+.course-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px; /* Space below the heading */
+  color: #333; /* Darker text for better contrast */
 }
 
-.course-info {
-  margin: 10px 0;
+.course-card p {
+  margin: 5px 0; /* Space between paragraphs */
+  color: #555; /* Slightly lighter text for details */
 }
 
-.course-detail {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+.course-card p strong {
+  color: #333; /* Bold text for labels */
 }
 
-.icon {
-  margin-right: 10px;
-  color: #007bff;
-}
-
-.instructor, .location, .students {
-  font-size: 14px;
-  color: #555;
-}
-
-.course-link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.course-link:hover {
-  text-decoration: underline;
+/* Optional: Style for the "Go to course" button */
+.course-card button {
+  background-color: #007bff; /* Blue background */
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
 }
