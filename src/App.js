@@ -19,6 +19,7 @@ function App() {
                 <CourseProvider>
                   <CourseCard />
                 </CourseProvider>} />
+
             </Routes>
           </div>
         </div>
