@@ -1,0 +1,108 @@
+{
+  "users": [
+    {
+      "userID": 1,
+      "name": "John Doe",
+      "age": 20,
+      "classID": 1,
+      "userName": "a123",
+      "password": "123",
+      "roleID": 1
+    },
+    {
+      "userID": 2,
+      "name": "Jane Smith",
+      "age": 22,
+      "classID": 1,
+      "userName": "a123",
+      "password": "123",
+      "roleID": 1
+    }
+  ],
+  "courses": [
+    {
+      "courseID": 1,
+      "courseName": "Software Testing",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 30,
+      "courseCode": "SWT301",
+      "semester": "SUMMER2024"
+    },
+    {
+      "courseID": 2,
+      "courseName": "Software Requirement",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 30,
+      "courseCode": "SWR302",
+      "semester": "SUMMER2024"
+    },
+    {
+      "courseID": 3,
+      "courseName": "Front-End web development ",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 30,
+      "courseCode": "FER202",
+      "semester": "SUMMER2024"
+    },
+    {
+      "courseID": 4,
+      "courseName": "Software development ",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 31,
+      "courseCode": "SWP391",
+      "semester": "SUMMER2024"
+    }
+  ],
+  "answers": [
+    {
+      "id": 1,
+      "answerDetail": "Detailed explanation of answer 1",
+      "questionID": 1,
+      "gradePoint": 999,
+      "userID": 1
+    },
+    {
+      "id": 2,
+      "answerDetail": "Detailed explanation of answer 2",
+      "questionID": 2,
+      "gradePoint": 999,
+      "userID": 1
+    }
+  ],
+  "questions": [
+    {
+      "questionID": 1,
+      "questionName": "What is Software Testing?",
+      "courseID": 1,
+      "slotID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "What are Software Requirements?",
+      "courseID": 2,
+      "slotID": 1,
+      "status": false
+    }
+  ],
+  "classes": [
+    {
+      "classID": 1,
+      "className": "SE1835-NJ"
+    }
+  ],
+  "slots": [
+    {
+      "slotID": 1,
+      "slotName": "Learn how to use vs code",
+      "startTime": "10:00",
+      "endTime": "11:00",
+      "courseID": 1,
+      "classID": 1
+    }
+  ]
+}
