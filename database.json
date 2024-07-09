@@ -59,18 +59,42 @@
   ],
   "answers": [
     {
-      "id": 1,
+      "answerID": 1,
       "answerDetail": "Detailed explanation of answer 1",
       "questionID": 1,
-      "gradePoint": 999,
+      "gradePoint": 20,
       "userID": 1
     },
     {
-      "id": 2,
+      "answerID": 2,
       "answerDetail": "Detailed explanation of answer 2",
       "questionID": 2,
-      "gradePoint": 999,
+      "gradePoint": 20,
       "userID": 1
+    },
+    {
+      "id": "d660",
+      "answerID": 3,
+      "answerDetail": "haha",
+      "questionID": 1,
+      "gradePoint": "",
+      "userID": 1
+    },
+    {
+      "id": "6dc8",
+      "answerID": 4,
+      "answerDetail": "hoho",
+      "questionID": 1,
+      "gradePoint": "",
+      "userID": 1
+    },
+    {
+      "id": "2362",
+      "answerID": 5,
+      "answerDetail": "answer",
+      "questionID": 1,
+      "gradePoint": "",
+      "userID": 2
     }
   ],
   "questions": [
@@ -79,6 +103,7 @@
       "questionName": "What is Software Testing?",
       "courseID": 1,
       "slotID": 1,
+      "classID": 1,
       "status": true
     },
     {
@@ -86,6 +111,7 @@
       "questionName": "What are Software Requirements?",
       "courseID": 2,
       "slotID": 1,
+      "classID": 1,
       "status": false
     }
   ],
@@ -101,8 +127,7 @@
       "slotName": "Learn how to use vs code",
       "startTime": "10:00",
       "endTime": "11:00",
-      "courseID": 1,
-      "classID": 1
+      "courseID": 1
     }
   ]
 }
