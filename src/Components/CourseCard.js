@@ -18,10 +18,6 @@ const CourseCard = () => {
   return (
     <div>
     <div className="app">
-        <Header />
-        <div className="main-content">
-          <Sidebar />
-        </div>
       </div>
       <div className='course-container'>
       {courses.map(course => (

@@ -1,6 +1,10 @@
 /* .content{
     margin-left: 0;
 } */
+.container{
+    width: 70%;
+    margin: 0 auto;
+ }
  
 .question{
     margin-left: 0;
@@ -57,7 +61,7 @@
 }
 .answer-input{
     width: 80%;
-    height: 170px;
+    height: 80px;
     border-radius: 5px;
     border-color: #ccc;
 }
@@ -88,7 +92,7 @@
     background-color: #ccc;
     border-radius: 50%;
 }
-.icon{
+.user .icon{
     display: flex;
     gap: 20px;
     align-items: center;
