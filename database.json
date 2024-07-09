@@ -1,0 +1,191 @@
+{
+  "courses": [
+    {
+      "courseID": 1,
+      "courseName": "Software Testing",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 30,
+      "courseCode": "SWT301",
+      "semester": "SUMMER2024",
+      "slots": [
+        {
+          "slotID": 1,
+          "name": "Slot 1",
+          "timeStart": "07:30",
+          "timeEnd": "09:50",
+          "date": "08/05/2024",
+          "title":[
+                  "Course Introduction",
+                  "Topic 1. Fundamentals of testing",
+                  "1.1 Why is testing necessary?" ,
+                  "1.2 What is testing?",
+                  "1.3 Testing principles",
+                  "1.4 Fundamental test process"
+                ],
+          "questions": [
+            {
+              "questionID": 1,
+              "questionText": "1.1 Why is testing necessary?"
+            },
+            {
+              "questionID": 2,
+              "questionText": "1.2 What is testing?"
+            },
+            {
+              "questionID": 3,
+              "questionText": "1.3 Testing principles"
+            },
+            {
+              "questionID": 4,
+              "questionText": "1.4 Fundamental test process"
+            }
+          ]
+        },
+        {
+          "slotID": 2,
+          "name": "Slot 2",
+          "timeStart": "10:00",
+          "timeEnd": "12:10",
+          "date": "10/05/2024",
+          "title":[
+                  "1.5 The psychology of testing",
+                  "1.5 The psychology of testing (cont.)",
+                  "1.6 Codes of ethics" 
+                ],
+          "questions": [
+            {
+              "questionID": 5,
+              "questionText": "2.1 The psychology of testing"
+            },
+            {
+              "questionID": 6,
+              "questionText": "2.2 The psychology of testing (cont.)"
+            },
+            {
+              "questionID": 7,
+              "questionText": "2.3 Codes of ethics"
+            }
+          ]
+        },
+        {
+          "slotID": 3,
+          "name": "Slot 3",
+          "timeStart": "07:30",
+          "timeEnd": "09:50",
+          "date": "15/05/2024",
+          "title":[
+                  "Topic 2. Testing throughout the software life cycle",
+                  "2.1 Software development models",
+                  "2.2 Test levels",
+                  "2.2 Test levels (cont.)" 
+                ],
+          "questions": [
+            {
+              "questionID": 8,
+              "questionText": "3.1 Software development models"
+            },
+            {
+              "questionID": 9,
+              "questionText": "3.2 Test levels"
+            },
+            {
+              "questionID": 10,
+              "questionText": "3.2 Test levels (cont.)"
+            }
+          ]
+        },
+        {
+          "slotID": 4,
+          "name": "Slot 4",
+          "timeStart": "10:00",
+          "timeEnd": "12:10",
+          "date": "17/05/2024",
+          "title":[
+                  "Lab Introduction",
+                  "2.3 Test types: the targets of testing",
+                  "2.3 Test types: the targets of testing (cont.)" 
+                ],
+          "questions": [
+            {
+              "questionID": 11,
+              "questionText": "4.1 Test types: the targets of testing"
+            },
+            {
+              "questionID": 12,
+              "questionText": "4.2 Test types: the targets of testing (cont.)"
+            }
+          ]
+        },
+        {
+          "slotID": 5,
+          "name": "Slot 5",
+          "timeStart": "07:30",
+          "timeEnd": "09:50",
+          "date": "22/05/2024",
+          "title":[
+                  "Guiding Lab 1 (Create Test Plan)",
+                  "Progress test 1",
+                  "Topic 3. Static techniques",
+                  "3.1 Reviews and the test process",
+                  "3.2 Review process"
+                ],
+          "questions": [
+            {
+              "questionID": 13,
+              "questionText": "5.1 Reviews and the test process"
+            },
+            {
+              "questionID": 14,
+              "questionText": "5.2 Review process"
+            }
+          ]
+        },
+        {
+          "slotID": 6,
+          "name": "Slot 6",
+          "timeStart": "10:00",
+          "timeEnd": "12:10",
+          "date": "24/05/2024",
+          "questions": [
+            {
+              "questionID": 15,
+              "questionText": "4.1 Test types: the targets of testing"
+            },
+            {
+              "questionID": 16,
+              "questionText": "4.2 Test types: the targets of testing (cont.)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "courseID": 2,
+      "courseName": "Software Requirement",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 30,
+      "courseCode": "SWR302",
+      "semester": "SUMMER2024"
+    },
+    {
+      "courseID": 3,
+      "courseName": "Front-End Web Development",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 30,
+      "courseCode": "FER202",
+      "semester": "SUMMER2024"
+    },
+    {
+      "courseID": 4,
+      "courseName": "Software Development",
+      "classID": 1,
+      "courseType": "edu_next_ltr_fpt_edu_02",
+      "numOfStudents": 31,
+      "courseCode": "SWP391",
+      "semester": "SUMMER2024"
+    }
+  ]
+}
