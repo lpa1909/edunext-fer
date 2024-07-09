@@ -5,6 +5,7 @@ import './App.css';
 import Answer from './Components/Answer';
 import Login from './page/Login';
 import ViewCourse from './page/ViewCourse';
+import CourseProvider from './Context/CourseContext';
 
 
 function App() {
@@ -17,7 +18,6 @@ function App() {
               <Route path='/answer' element={<Answer/>}/>
               <Route path="/" element={<Login/>} />
             </Routes>
-
       </div>
 
     </Router>
