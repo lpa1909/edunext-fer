@@ -1,26 +1,30 @@
-import React from 'react';
-import { FaUserGraduate, FaMapMarkerAlt, FaUserFriends } from 'react-icons/fa';
+import React, { useContext } from 'react';
+import { CourseContext } from '../Context/CourseContext';
 import '../Css/CourseCard.css';
+import { FaBook, FaUserGraduate, FaChalkboardTeacher } from 'react-icons/fa';
 
-const CourseCard = ({ course }) => {
+const CourseCard = () => {
+  const { courses } = useContext(CourseContext);
+
   return (
-    <div className="course-card">
-      <h3>{course.title}</h3>
-      <div className="course-info">
-        <div className="course-detail">
-          <FaUserGraduate className="icon" />
-          <span className="instructor">{course.instructor}</span>
-        </div>
-        <div className="course-detail">
-          <FaMapMarkerAlt className="icon" />
-          <span className="location">{course.location}</span>
-        </div>
-        <div className="course-detail">
-          <FaUserFriends className="icon" />
-          <span className="students">{course.students} students</span>
-        </div>
+    <div className='course-container'>
+      {courses.map(course => (
+        <div key={course.courseCode} className="course-card">
+        <FaBook className="course-icon" /> {/* Font Awesome book icon */}
+        <h2>{course.courseName}</h2>
+        <p><strong>Course Code:</strong> {course.courseCode}</p>
+        <p><strong>Class:</strong> {course.classID}</p>
+        <p><strong>Course Type:</strong> {course.courseType}</p>
+        <p>
+          <FaUserGraduate className="course-icon" /> {/* Font Awesome user icon */}
+          <strong>Number of Students:</strong> {course.numOfStudents}
+        </p>
+        <p>
+          <FaChalkboardTeacher className="course-icon" /> {/* Font Awesome teacher icon */}
+          <strong>Semester:</strong> {course.semester}
+        </p>
       </div>
-      <a href="#" className="course-link">Go to course &rarr;</a>
+      ))}
     </div>
   );
 };
