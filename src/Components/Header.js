@@ -12,9 +12,10 @@ const Header = () => {
         <div className="semester-dropdown">
           <label htmlFor="semester">SEMESTER</label>
           <select id="semester" name="semester">
+            <option value="SPRING2024">SPRING2024</option>
             <option value="SUMMER2024">SUMMER2024</option>
             <option value="FALL2024">FALL2024</option>
-            <option value="WINTER2024">WINTER2024</option>
+            {/* <option value="WINTER2024">WINTER2024</option> */}
           </select>
         </div>
       </div>

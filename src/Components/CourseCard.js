@@ -1,7 +1,11 @@
 import React, { useContext } from 'react';
 import { CourseContext } from '../Context/CourseContext';
 import '../Css/CourseCard.css';
+
 import { FaBook, FaUserGraduate, FaChalkboardTeacher, FaUsers, FaBookReader } from 'react-icons/fa';
+import Header from './Header';
+import Sidebar from './Sidebar';
+
 
 const CourseCard = () => {
   const { courses , classes  } = useContext(CourseContext);
@@ -12,7 +16,14 @@ const CourseCard = () => {
   };
 
   return (
-    <div className='course-container'>
+    <div>
+    <div className="app">
+        <Header />
+        <div className="main-content">
+          <Sidebar />
+        </div>
+      </div>
+      <div className='course-container'>
       {courses.map(course => (
         <div key={course.courseCode} className="course-card">
         <h2><FaBook className="course-icon" /> {course.courseName}</h2>
@@ -27,6 +38,8 @@ const CourseCard = () => {
       </div>
       ))}
     </div>
+    </div>
+    
   );
 };
 

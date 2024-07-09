@@ -1,6 +1,8 @@
 .app {
   display: flex;
   flex-direction: column;
+  margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .header {
@@ -24,4 +26,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+.course-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
