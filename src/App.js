@@ -1,28 +1,18 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './Components/Sidebar';
-import './App.css';
-import Header from './Components/Header';
-import CourseCard from './Components/CourseCard';
-import CourseProvider from './Context/CourseContext';
+import Login from './page/Login';
+import ViewCourse from './page/ViewCourse';
 
 function App() {
   return (
     <Router>
-      <div className="app">
-        <Header />
-        <div className="main-content">
-          <Sidebar />
-          <div className="content">
+      <div>
             <Routes>
-              <Route path="/" element={
-                <CourseProvider>
-                  <CourseCard />
-                </CourseProvider>} />
+              <Route path="/viewCourse" element={<ViewCourse/>} />
 
+              <Route path="/" element={<Login/>} />
             </Routes>
-          </div>
-        </div>
+
       </div>
     </Router>
   );

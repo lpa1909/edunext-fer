@@ -1,0 +1,119 @@
+/* login-container */
+.login-container {
+  width: 400px;
+  margin: 70px auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* login-options */
+.login-option {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.google-button,
+.fpt-button {
+  padding: 12px 20px;
+  width: 100%;
+  border: none;
+  border-radius: 18px ;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+}
+
+.google-button img,
+.fpt-button img {
+  height: 25px; 
+}
+
+.feid-button {
+  background-color: #007bff;
+  /* Màu xanh FPT */
+  color: #fff;
+}
+
+.feid-button img {
+  width: 20px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* vpn-warning */
+.vpn-warning {
+  text-align: center;
+  background-color: #ffffe0;
+  border: 1px solid #ffcc00;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+/* form */
+.select-container,
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.close-icon,
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}

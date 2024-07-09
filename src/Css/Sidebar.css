@@ -49,3 +49,19 @@
 .sidebar-icon:hover {
   color: #007bff;
 }
+
+.dropdown-menu {
+  width: 250px;
+  height: 65px;
+  border-radius: 8px; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  margin-left: 200px;
+  background-color: rgba(175, 175, 175, 0.87);
+  
+}
+
+.dropdown-item {
+  padding: 10px 15px; /* Điều chỉnh padding */
+  text-decoration: none;
+  color: black;
+}
