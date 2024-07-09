@@ -4,10 +4,12 @@ import axios from 'axios';
 export const CourseContext = createContext();
 
 const CourseProvider = ({ children }) => {
+
   const [courses, setCourses] = useState([]);
   const [inputAnswer, setInputAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
   const [users, setUsers] = useState([]);
+  const [classes, setClasses] = useState([]);
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -23,7 +25,31 @@ const CourseProvider = ({ children }) => {
       }
     };
     fetchCourses();
+    
+    
+    const fetchData = async () => {
+          try {
+            // Fetch courses and classes concurrently
+            const [coursesResponse, classesResponse] = await Promise.all([
+              axios.get('http://localhost:9999/courses'),
+              axios.get('http://localhost:9999/classes')
+            ]);
+    
+            setCourses(coursesResponse.data);
+            setClasses(classesResponse.data);
+          } catch (error) {
+            console.error('Error fetching data:', error);
+          }
+        };
+    
+        fetchData();
+    
+    
+    
   }, []);
+  
+  
+
 
 const addAnswer = async (questionId, userId, answer) => {
   const response = await axios.post('http://localhost:9999/answers', {
@@ -37,7 +63,9 @@ const addAnswer = async (questionId, userId, answer) => {
 
 
   return (
-    <CourseContext.Provider value={{ courses, inputAnswer, setInputAnswer,answers, setAnswers, users, setUsers, addAnswer }}>
+
+    <CourseContext.Provider value={{ courses, classes, inputAnswer, setInputAnswer,answers, setAnswers, users, setUsers, addAnswer }}>
+
       {children}
     </CourseContext.Provider>
   );

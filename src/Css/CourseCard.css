@@ -10,7 +10,7 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 20px;
-  width: 250px;  /* Adjust card width as needed */
+  width: 300px;  /* Adjust card width as needed */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 

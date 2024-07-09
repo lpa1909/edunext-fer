@@ -1,21 +1,25 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
 import './App.css';
-import CourseCard from './Components/CourseCard';
-import CourseProvider from './Context/CourseContext';
 import Answer from './Components/Answer';
-import Star from './Components/Star';
+import Login from './page/Login';
+import ViewCourse from './page/ViewCourse';
+
 
 function App() {
   return (
     <CourseProvider>
     <Router>
-          <div className="content">
+      <div>
             <Routes>
-              <Route path="/" element={<CourseCard />}/>
+              <Route path="/viewCourse" element={<ViewCourse/>} />
               <Route path='/answer' element={<Answer/>}/>
+              <Route path="/" element={<Login/>} />
             </Routes>
-          </div>
+
+      </div>
+
     </Router>
     </CourseProvider>
   );

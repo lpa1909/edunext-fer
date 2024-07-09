@@ -1,12 +1,19 @@
 import React, { useContext } from 'react';
 import { CourseContext } from '../Context/CourseContext';
 import '../Css/CourseCard.css';
-import { FaBook, FaUserGraduate, FaChalkboardTeacher } from 'react-icons/fa';
+
+import { FaBook, FaUserGraduate, FaChalkboardTeacher, FaUsers, FaBookReader } from 'react-icons/fa';
 import Header from './Header';
 import Sidebar from './Sidebar';
 
+
 const CourseCard = () => {
-  const { courses } = useContext(CourseContext);
+  const { courses , classes  } = useContext(CourseContext);
+
+  const getClassName = (classID) => {
+    const foundClass = classes.find(c => c.classID === classID);
+    return foundClass ? foundClass.className : 'Lớp không xác định'; 
+  };
 
   return (
     <div>
@@ -19,18 +26,14 @@ const CourseCard = () => {
       <div className='course-container'>
       {courses.map(course => (
         <div key={course.courseCode} className="course-card">
-        <FaBook className="course-icon" /> {/* Font Awesome book icon */}
-        <h2>{course.courseName}</h2>
-        <p><strong>Course Code:</strong> {course.courseCode}</p>
-        <p><strong>Class:</strong> {course.classID}</p>
-        <p><strong>Course Type:</strong> {course.courseType}</p>
-        <p>
-          <FaUserGraduate className="course-icon" /> {/* Font Awesome user icon */}
-          <strong>Number of Students:</strong> {course.numOfStudents}
+        <h2><FaBook className="course-icon" /> {course.courseName}</h2>
+        <p style={{color: 'gray'}}><FaUsers className="course-icon" /> Class: {getClassName(course.classID)}</p>
+        <p style={{color: 'gray'}}><FaBookReader className="course-icon" /> Course Type: {course.courseType}</p>
+        <p style={{color: 'gray'}}>
+          <FaUserGraduate className="course-icon" /> Number of Students: {course.numOfStudents}
         </p>
-        <p>
-          <FaChalkboardTeacher className="course-icon" /> {/* Font Awesome teacher icon */}
-          <strong>Semester:</strong> {course.semester}
+        <p style={{color: 'gray'}}>
+          <FaChalkboardTeacher className="course-icon" /> Semester: {course.semester}
         </p>
       </div>
       ))}
