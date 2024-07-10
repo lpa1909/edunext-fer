@@ -148,12 +148,206 @@
     },
     {
       "questionID": 1,
+      "questionName": "What are the differences of quality assurance and testing?",
+      "courseID": 1,
+      "slotID": 3,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "How does testing influence and quality and other factors?",
+      "courseID": 1,
+      "slotID": 3,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "What are the differences of quality assurance and testing?",
+      "courseID": 1,
+      "slotID": 3,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "What the major activities in test analysis include?",
+      "courseID": 1,
+      "slotID": 4,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "What the major activities which test design include?",
+      "courseID": 1,
+      "slotID": 4,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "Who should be tester? Why? What is their reponsibility?",
+      "courseID": 1,
+      "slotID": 4,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "What are tester&rsquo;s and developer&rsquo;s mindsets?",
+      "courseID": 1,
+      "slotID": 5,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "How many testing ways? Description?",
+      "courseID": 1,
+      "slotID": 5,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "Why should we apply the early test design in software development life cycle?",
+      "courseID": 1,
+      "slotID": 5,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "What is V- model? What are advantages of V-Model?",
+      "courseID": 1,
+      "slotID": 6,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "What is Unit test, Integration test, System test, Acceptance test?",
+      "courseID": 1,
+      "slotID": 6,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "The test levels are characterized by which attributes?",
+      "courseID": 1,
+      "slotID": 6,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "What incremental integration strategy in software testing?",
+      "courseID": 1,
+      "slotID": 7,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "How to test function (functional testing)?",
+      "courseID": 1,
+      "slotID": 7,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "How to test software product characteristics (non-functional testing)?",
+      "courseID": 1,
+      "slotID": 7,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "What are Functionality, reliability, usability, effciency, maintainability, portability?",
+      "courseID": 1,
+      "slotID": 8,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "How to test software structure/architecture (structural testing)?",
+      "courseID": 1,
+      "slotID": 8,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "What are stubs and drivers in intergration testing?",
+      "courseID": 1,
+      "slotID": 8,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "How to test to preserve quality?",
+      "courseID": 1,
+      "slotID": 9,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "What is impact analysis in maintenance testing?",
+      "courseID": 1,
+      "slotID": 9,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "Systematic technique: What is Static (non-execution) testing? Which Tools can be use for static testing?",
+      "courseID": 1,
+      "slotID": 9,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 1,
+      "questionName": "What is Process of Static Testing? What are the difference between static and dynamic techniques?",
+      "courseID": 1,
+      "slotID": 10,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 2,
+      "questionName": "What the common types of reviews and their associated attributes?",
+      "courseID": 1,
+      "slotID": 10,
+      "classID": 1,
+      "status": true
+    },
+    {
+      "questionID": 3,
+      "questionName": "Which work products can be examined using static testing?",
+      "courseID": 1,
+      "slotID": 10,
+      "classID": 1,
+      "status": true
+    },
+
+    {
+      "questionID": 1,
       "questionName": "What are the differences between testing and debugging?",
       "courseID": 1,
       "slotID": 11,
       "classID": 1,
       "status": true
     }
+
   ],
   "classes": [
     {
