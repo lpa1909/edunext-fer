@@ -1,13 +1,23 @@
 import React from 'react';
 import '../Css/Header.css';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
+  const navigate = useNavigate();
+  const handleToggleCourse = () => {
+     
+  }
+
+  const handleToggleProject = () => {
+     navigate(`/viewProject`);
+  }  
+
   return (
     <div className="header">
       <div className="header-top">
         <div className="tabs">
           <button className="tab active">COURSE</button>
-          <button className="tab">PROJECT</button>
+          <button className="tab" onClick={handleToggleProject}>PROJECT</button>
         </div>
         <div className="semester-dropdown">
           <label htmlFor="semester">SEMESTER</label>

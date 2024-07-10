@@ -8,7 +8,8 @@
       "userName": "a123",
       "password": "123",
       "roleID": 1,
-      "id": "cafe"
+      "email": "anlphe176714@fpt.edu.vn",
+      "campus": "hola"
     },
     {
       "id": 2,
@@ -17,7 +18,9 @@
       "classID": 2,
       "userName": "namlphe1234",
       "password": "khongnoi",
-      "roleID": 1
+      "roleID": 1,
+      "email": "andepzai.8686@gmail.com",
+      "campus": "hola"
     },
     {
       "id": 3,
@@ -26,8 +29,9 @@
       "classID": 1,
       "userName": "jshe123",
       "password": "1111",
-      "roleID": 1
-
+      "roleID": 1,
+      "email": "cccccc@fpt.edu.vn",
+      "campus": "hola"
     }
   ],
   "courses": [
