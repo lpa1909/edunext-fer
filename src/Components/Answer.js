@@ -1,11 +1,10 @@
 import React, { useRef, useContext, useState } from "react";
-import { Col, Row, Button, Container, Tabs, Tab, Form } from "react-bootstrap";
+import { Col, Row, Button, Container, Form } from "react-bootstrap";
 import "../Css/Answer.css";
 import { CourseContext } from "../Context/CourseContext";
-import { edunext } from "../image/edunext.png";
+import edunext from "../image/edunext.png";
 
 const Answer = () => {
-    
     const { answers, users, addAnswer } = useContext(CourseContext);
     const [answer, setAnswer] = useState({
         answerID: "",
@@ -36,16 +35,24 @@ const Answer = () => {
     const [hover, setHover] = useState(null);
     const starMenuRef = useRef(null);
 
-    const handleMouseEnter = (answerID) => {
+    const handleMouseEnterVote = (answerID) => {
         setHover(answerID);
-        console.log("hover true");
     };
 
-    const handleMouseLeave = (event) => {
-        if (starMenuRef.current && !starMenuRef.current.contains(event.target)) {
-      setHover(null);
-    }
+    const handleMouseLeaveVote = (event) => {
+        if (!starMenuRef.current.contains(event.relatedTarget)) {
+            setHover(null);
+        }
     };
+
+    const handleMouseEnterStars = () => {
+        // Do nothing on entering stars
+    };
+
+    const handleMouseLeaveStars = () => {
+        setHover(null);
+    };
+
     return (
         <Container className="container">
             <Row>
@@ -92,7 +99,6 @@ const Answer = () => {
                             >
                                 <option value="Voted">Voted</option>
                                 <option value="Inside">Inside group</option>
-                                
                             </Form.Control>
                         </Form.Group>
                         <Form.Group className="answer">
@@ -113,12 +119,12 @@ const Answer = () => {
                 </Col>
                 <Col xs={12} md={8} className="detail-answer">
                     {answers.map((a) => {
-                        const user = users.find((u) => u.userID == a.userID);
+                        const user = users.find((u) => u.userID === a.userID);
                         return (
                             <div className="user" key={a.answerID}>
                                 <div className="icon">
                                     <div className="icon-image">
-                                        <img src="../image/edunext.png" alt=""></img>
+                                        <img src={edunext} alt="User icon" />
                                     </div>
                                     <div className="icon-name">
                                         <h3>{user ? user.name : "Anonymous"}</h3>
@@ -127,19 +133,26 @@ const Answer = () => {
 
                                 <div className="user-answer">
                                     <p>{a.answerDetail}</p>
-                                    <div className="grade-point"><span className="star gold star-grade">&#9733;</span> {a.gradePoint ? a.gradePoint: 0}</div>
+                                    <div className="grade-point">
+                                        <span className="star gold star-grade">&#9733;</span> {a.gradePoint ? a.gradePoint : 0}
+                                    </div>
                                 </div>
                                 <div className="user-action">
                                     <span>Reply</span>
                                     <span
                                         className="vote-text"
-                                        onMouseEnter={() => handleMouseEnter(a.answerID)}
-                                        onMouseLeave={handleMouseLeave}
+                                        onMouseEnter={() => handleMouseEnterVote(a.answerID)}
+                                        onMouseLeave={handleMouseLeaveVote}
                                     >
                                         Vote
                                     </span>
-                                    {hover == a.answerID && (
-                                        <div className="stars-container" ref={starMenuRef}>
+                                    {hover === a.answerID && (
+                                        <div
+                                            className="stars-container"
+                                            ref={starMenuRef}
+                                            onMouseEnter={handleMouseEnterStars}
+                                            onMouseLeave={handleMouseLeaveStars}
+                                        >
                                             <div className="star-item item1">
                                                 <span className="star red">&#9733;</span> = 4{" "}
                                                 <span className="star gold">&#9733;</span>
