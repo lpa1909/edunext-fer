@@ -11,6 +11,7 @@ const ViewCourse = () => {
   const { id } = useParams();
   const [course, setCourse] = useState({});
   const [user, setUser] = useState([]);
+  console.log('id: ', id)
   useEffect(() => {
     const fetchCourse = async () => {
       const response = await axios.get(

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "../Css/Login.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-function Login() {
+
+const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [campus, setCampus] = useState("");
@@ -12,7 +13,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     if (!username || !password) {
-      alert("Please enter username and password");
+      alert("Vui lòng nhập đầy đủ thông tin và mật khẩu.");
       return;
     }
     try {
@@ -25,20 +26,21 @@ function Login() {
       if (user) {
         const classResponse = await axios.get(`http://localhost:9999/classes?classID=${user.classID}`);
         const classData = classResponse.data[0];
-        if(classData){
+        if (classData) {
+
           navigate(`/viewCourse/${user.id}`);
         }
       } else {
-        alert("Invalid credentials");
+        alert("Tên đăng nhập hoặc mật khẩu không đúng.");
       }
     } catch (error) {
       console.error("Login failed", error);
     }
-    
+
   };
 
 
-  
+
   return (
     <div className="login-container">
       <div className="login-header">
@@ -50,7 +52,7 @@ function Login() {
         <h2>The social constructive learning tool</h2>
       </div>
       <div class="login-option">
-        <button class="google-button">
+        <button class="google-button" >
           <img
             src="https://th.bing.com/th/id/R.7e557f1c0864829c54c300d15bee69f4?rik=fjZN1AYH30vXIw&riu=http%3a%2f%2fpngimg.com%2fuploads%2fgoogle%2fgoogle_PNG19635.png&ehk=ZmsumEtoeJQhKoUzQTZO2TEbYPBu0%2b7EFdjmJ3qljls%3d&risl=&pid=ImgRaw&r=0"
             alt="Google Logo"

@@ -2,16 +2,17 @@ import React, { useState } from 'react';
 import '../Css/Sidebar.css';
 import { FaHome, FaClipboardList, FaBell, FaFilePdf, FaHeadphones, FaQuestionCircle, FaBars, FaUserCircle } from 'react-icons/fa';
 import Dropdown from 'react-bootstrap/Dropdown';
-
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
+  const navigate = useNavigate();
   const handleToggle = () => {
-    setShowDropdown(!showDropdown)
+    setShowDropdown(showDropdown => !showDropdown)
   };
 
   const handleLogOut = () => {
-
+    navigate(`/`);
   }
 
   return (
