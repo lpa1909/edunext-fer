@@ -5,6 +5,7 @@ import './App.css';
 import Answer from './Components/Answer';
 import Login from './page/Login';
 import ViewCourse from './page/ViewCourse';
+import ViewProject from './page/ViewProject';
 import CourseProvider from './Context/CourseContext';
 import Course from './Components/Course/Course';
 
@@ -18,8 +19,10 @@ function App() {
             <Routes>
               <Route path="/viewCourse/:id" element={<ViewCourse/>} />
               <Route path='/answer/:id' element={<Answer/>}/>
+              <Route path='/viewProject' element={<ViewProject/>}/>
               <Route path="/" element={<Login/>} />
               <Route path="/course/:id" element={<Course/>}/>
+              
             </Routes>
       </div>
 
