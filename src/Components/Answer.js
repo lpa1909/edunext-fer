@@ -4,9 +4,15 @@ import "../Css/Answer.css";
 import { CourseContext } from "../Context/CourseContext";
 import edunext from "../image/edunext.png";
 import axios from "axios";
+import { useParams } from 'react-router-dom';
 
 const Answer = () => {
-  const { answers, setAnswers, users, addAnswer } = useContext(CourseContext);
+  const { answers, setAnswers, users, addAnswer, questions, setQuestions } = useContext(CourseContext);
+  const [hover, setHover] = useState(null);
+  const starMenuRef = useRef(null);
+  const {id} = useParams();
+  const question = questions.find(q => q.questionID == id);
+
   const [answer, setAnswer] = useState({
     id: "",
     answerDetail: "",
@@ -14,6 +20,9 @@ const Answer = () => {
     gradePoint: "",
     userID: "",
   });
+  if (!question) {
+    return <h2>Question not found</h2>;
+  }
 
   const handleChange = (e) => {
     setAnswer({ ...answer, [e.target.name]: e.target.value });
@@ -33,8 +42,7 @@ const Answer = () => {
     });
   };
 
-  const [hover, setHover] = useState(null);
-  const starMenuRef = useRef(null);
+ 
 
   const handleMouseEnterVote = (answerID) => {
     setHover(answerID);
@@ -86,9 +94,7 @@ const Answer = () => {
           <div className="question-content">
             <h2 className="content-heading">Content</h2>
             <p className="content-question">
-              Which functions/screens have you completed and ready for
-              demonstrating in the last iteration? What are pending issues with
-              each of those?
+              {question.questionName}
             </p>
           </div>
         </Col>
@@ -112,7 +118,7 @@ const Answer = () => {
             <span>TEACHER/S MESSAGE</span>
           </div>
         </Col>
-        <Col>
+        <Col xs={12} md={8}>
           <Form className="form-input" onSubmit={handleSubmit}>
             <Form.Group className="select">
               <Form.Control
@@ -144,7 +150,7 @@ const Answer = () => {
         </Col>
         <Col xs={12} md={8} className="detail-answer">
           {answers.map((a) => {
-            const user = users.find((u) => u.userID === a.userID);
+            const user = users.find((u) => u.id == a.userID);
             return (
               <div className="user" key={a.id}>
                 <div className="icon">

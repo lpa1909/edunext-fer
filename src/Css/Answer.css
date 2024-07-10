@@ -48,14 +48,14 @@
     display: flex;
     justify-content: center;
 }
-.select-voted{
+.select .select-voted{
     width: 200px;
     height: 35px;
     border-radius: 5px;
     border-color: #ccc;
     padding: 6px 65px 6px 6px;
 }
-.answer{
+.select .answer{
     display: flex;
     justify-content: center;
 }
@@ -67,6 +67,7 @@
 }
 .form-input{
     position: relative;
+    margin-bottom: 80px;
 }
 .form-input button{
     position: absolute;
@@ -84,7 +85,7 @@
 .detail-answer{
     margin-top: 100px;
     width: 80%;
-    margin-left: 98px;
+    margin-left: 0;
 }
 .icon-image img{
     width: 40px;

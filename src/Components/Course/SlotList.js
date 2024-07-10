@@ -1,8 +1,9 @@
 import '../../Css/SlotList.css';
 import React, { useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { CourseContext } from '../../Context/CourseContext';
 import { FaRegCalendarAlt } from "react-icons/fa";
+import { Button } from 'react-bootstrap';
 
 const SlotList = () => {
     const context = useContext(CourseContext);
@@ -51,7 +52,8 @@ const SlotList = () => {
                                     {selectedQuestions.length > 0 ? (
                                         selectedQuestions.map((question)=> (
                                             <div key={question.questionID} className="question">
-                                                <button>Q{question.questionID} {question.questionName}</button>
+                                                <button className='question-button'><Link to={`/answer/${question.questionID}`}>Q{question.questionID} {question.questionName}</Link></button>
+                                                {/* <Button className='question-button' as={Link} to={`/answer/${question.questionID}`}></Button> */}
                                             </div>
                                         ))
                                     ) : (
