@@ -6,10 +6,14 @@ import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
-  const navigate = useNavigate();
+
   const handleToggle = () => {
-    setShowDropdown(showDropdown => !showDropdown)
-  };
+    setShowDropdown(!showDropdown);
+  }
+
+  const navigate = useNavigate();
+  
+
 
   const handleLogOut = () => {
     navigate(`/`);
@@ -19,15 +23,20 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="sidebar-top">
         <img src="https://brademar.com/wp-content/uploads/2022/09/FPT-Logo-PNG.png" alt="FPT Education Logo" className="sidebar-logo" />
-        <FaUserCircle className="sidebar-icon profile-icon" onClick={handleToggle} />
+
+       
+        <FaUserCircle className="sidebar-icon profile-icon" onClick={handleToggle}/>
+       
         
-        <Dropdown show={showDropdown}>
-          <Dropdown.Menu>
-            <Dropdown.Item onClick={handleToggle}>anlphe176714@fpt.edu.vn</Dropdown.Item>
-            <Dropdown.Divider />
-            <Dropdown.Item onClick={handleLogOut}>Logout</Dropdown.Item>
-          </Dropdown.Menu>
-        </Dropdown>
+      {showDropdown && (
+        <ul className='infor'>
+          <li className='infor-email'>anlphe176714@fpt.edu.vn</li>
+          <div className='border'></div>
+          <li className='infor-logout' onClick={handleLogOut}>Logout</li>
+        </ul>
+      )
+      }  
+     
       </div>
       <div className="sidebar-menu">
         <FaBars className="sidebar-icon" />
