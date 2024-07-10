@@ -8,7 +8,6 @@
 
 .slot {
     margin-bottom: 20px;
-    
 }
 
 
@@ -47,6 +46,11 @@
     padding: 10px;
     border-left: 2px solid #ddd;
 }
+.question .question-button a{
+    border-color: none;
+    text-decoration: none;
+    color: black;
+}
 
 .question {
     margin-left: 20px;
@@ -75,12 +79,9 @@
     border: 1px;
     padding: 0px;
     background-color: white;
-
- 
 }
 
 .question-list{
     border: 1px solid #ddd;
-    
 }
 
