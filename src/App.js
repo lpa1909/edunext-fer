@@ -18,10 +18,10 @@ function App() {
       <div>
             <Routes>
               <Route path="/viewCourse/:id" element={<ViewCourse/>} />
-              <Route path='/answer/:id' element={<Answer/>}/>
+              <Route path='/answer/:questionID/:userID' element={<Answer/>}/>
               <Route path='/viewProject' element={<ViewProject/>}/>
               <Route path="/" element={<Login/>} />
-              <Route path="/course/:id" element={<Course/>}/>
+              <Route path="/course/:id/:userID" element={<Course/>}/>
               
             </Routes>
       </div>

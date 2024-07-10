@@ -45,7 +45,7 @@ const ViewCourse = () => {
 
           {course !== null ? (
             <CourseProvider courseData={course}>
-              <CourseCard/>  
+              <CourseCard userID={id}/>  
             </CourseProvider>
           ) : (
             <p>Bạn chưa có lớp học cho kì này</p>
