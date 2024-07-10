@@ -1,8 +1,8 @@
 {
   "users": [
     {
-      "userID": 1,
-      "name": "John Doe",
+      "id": 1,
+      "name": "Nguyen Van A",
       "age": 20,
       "classID": 1,
       "userName": "a123",
@@ -11,14 +11,23 @@
       "id": "cafe"
     },
     {
-      "userID": 2,
+      "id": 2,
+      "name": "Jane Smith",
+      "age": 22,
+      "classID": 2,
+      "userName": "namlphe1234",
+      "password": "khongnoi",
+      "roleID": 1
+    },
+    {
+      "id": 3,
       "name": "Jane Smith",
       "age": 22,
       "classID": 1,
-      "userName": "a123",
-      "password": "123",
-      "roleID": 1,
-      "id": "b206"
+      "userName": "jshe123",
+      "password": "1111",
+      "roleID": 1
+
     }
   ],
   "courses": [
@@ -104,27 +113,17 @@
       "questionID": 1,
       "gradePoint": 24,
       "userID": 2
-    },
-    {
-      "id": "7",
-      "answerDetail": "",
-      "questionID": "",
-      "gradePoint": 4,
-      "userID": ""
-    },
-    {
-      "id": "8",
-      "answerDetail": "",
-      "questionID": "",
-      "gradePoint": 4,
-      "userID": ""
     }
+
   ],
   "classes": [
     {
       "classID": 1,
-      "className": "SE1835-NJ",
-      "id": "3121"
+      "className": "SE1835-NJ"
+    }, 
+    {
+      "classID": 2,
+      "className": "SE1837-NJ"
     }
   ],
   "slots": [

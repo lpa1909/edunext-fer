@@ -10,11 +10,12 @@ import CourseProvider from './Context/CourseContext';
 
 function App() {
   return (
+    
     <CourseProvider>
     <Router>
       <div>
             <Routes>
-              <Route path="/viewCourse" element={<ViewCourse/>} />
+              <Route path="/viewCourse/:id" element={<ViewCourse/>} />
               <Route path='/answer' element={<Answer/>}/>
               <Route path="/" element={<Login/>} />
             </Routes>
