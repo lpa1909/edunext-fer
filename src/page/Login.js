@@ -15,22 +15,30 @@ function Login() {
       alert("Please enter username and password");
       return;
     }
-
     try {
+      console.log('Sending request to API');
       const response = await axios.get(
         `http://localhost:9999/users?userName=${username}&password=${password}`
       );
       const user = response.data[0];
-      console.log(user.roleID + " " + user.name);
+      console.log(user)
       if (user) {
-        navigate(`/viewCourse`);
+        const classResponse = await axios.get(`http://localhost:9999/classes?classID=${user.classID}`);
+        const classData = classResponse.data[0];
+        if(classData){
+          navigate(`/viewCourse/${user.id}`);
+        }
       } else {
         alert("Invalid credentials");
       }
     } catch (error) {
       console.error("Login failed", error);
     }
+    
   };
+
+
+  
   return (
     <div className="login-container">
       <div className="login-header">
