@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { CourseContext } from '../Context/CourseContext';
 import '../Css/CourseCard.css';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 import { FaBook, FaUserGraduate, FaChalkboardTeacher, FaUsers, FaBookReader } from 'react-icons/fa';
 import Header from './Header';
@@ -31,6 +33,7 @@ const CourseCard = () => {
         <p style={{color: 'gray'}}>
           <FaChalkboardTeacher className="course-icon" /> Semester: {course.semester}
         </p>
+        <Button as={Link} to={`/course/${course.courseID}`} >Go to course</Button>
       </div>
       ))}
     </div>
