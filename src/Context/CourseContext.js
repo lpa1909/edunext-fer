@@ -14,7 +14,7 @@ const CourseProvider = ({ children , courseData  }) => {
   const [classes, setClasses] = useState([]);
   const [slots, setSlot] = useState([]);
   const [questions, setQuestions] = useState([]);
- console.log(courseData)
+
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -56,7 +56,7 @@ const CourseProvider = ({ children , courseData  }) => {
   const addAnswer = async (questionId, userId, answer) => {
     const response = await axios.post("http://localhost:9999/answerM", {
       ...answer,
-      id: answers.length+1,
+      id: (answers.length+1).toString,
       questionID: questionId,
       userID: userId,
     });

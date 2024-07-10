@@ -10,8 +10,9 @@ const Answer = () => {
   const { answers, setAnswers, users, addAnswer, questions, setQuestions } = useContext(CourseContext);
   const [hover, setHover] = useState(null);
   const starMenuRef = useRef(null);
-  const {id} = useParams();
-  const question = questions.find(q => q.questionID == id);
+  const {questionID, userID} = useParams();
+  const question = questions.find(q => q.questionID == questionID);
+  const user = users.find(u => users.id == userID);
 
   const [answer, setAnswer] = useState({
     id: "",
@@ -30,9 +31,9 @@ const Answer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const questionId = 1;
-    const userId = 2;
-    addAnswer(questionId, userId, answer);
+    
+    
+    addAnswer(question.questionID, userID, answer);
     setAnswer({
       id: "",
       answerDetail: "",
@@ -65,15 +66,18 @@ const Answer = () => {
   const handleOnClick = async (answerID, grade) => {
     try {
         const answerUpdate = answers.find(a => a.id == answerID);
+        
         console.log("answerUpdate: ", answerUpdate);
         if(!answerUpdate){
             console.log("answer is not valid");
             return;
         }
+        const currentGradePoint = answerUpdate.gradePoint !== null ? parseInt(answerUpdate.gradePoint) : 0;
       const response = await axios.put(`http://localhost:9999/answerM/${answerID}`, { 
         ...answerUpdate,
-        gradePoint: parseInt(answerUpdate.gradePoint) + grade, 
+        gradePoint: currentGradePoint + grade, 
     });
+    console.log("data" ,response.data);
       setAnswers((prevAnswers) =>
         prevAnswers.map((a) => (a.id === answerID ? response.data : a))
       );

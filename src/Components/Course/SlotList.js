@@ -8,6 +8,7 @@ import { Button } from 'react-bootstrap';
 const SlotList = () => {
     const context = useContext(CourseContext);
     const { id } = useParams();
+    const {userID} = useParams();
 
     const { slots, questions } = context;
     const filteredSlots = slots.filter(s => s.courseID === parseInt(id));
@@ -52,7 +53,7 @@ const SlotList = () => {
                                     {selectedQuestions.length > 0 ? (
                                         selectedQuestions.map((question)=> (
                                             <div key={question.questionID} className="question">
-                                                <button className='question-button'><Link to={`/answer/${question.questionID}`}>Q{question.questionID} {question.questionName}</Link></button>
+                                                <button className='question-button'><Link to={`/answer/${question.questionID}/${userID}`}>Q{question.questionID} {question.questionName}</Link></button>
                                                 {/* <Button className='question-button' as={Link} to={`/answer/${question.questionID}`}></Button> */}
                                             </div>
                                         ))

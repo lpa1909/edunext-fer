@@ -6,9 +6,11 @@ import { Button } from 'react-bootstrap';
 import { FaBook, FaUserGraduate, FaChalkboardTeacher, FaUsers, FaBookReader } from 'react-icons/fa';
 
 
-const CourseCard = () => {
+const CourseCard = (userID) => {
   const { courseData, classes } = useContext(CourseContext);
   const courseArray = Object.values(courseData)
+
+  console.log("userID: ", userID.userID);
 
   console.log(courseArray.length)
   const getClassName = (classID) => {
@@ -35,7 +37,7 @@ const CourseCard = () => {
               <FaChalkboardTeacher className="course-icon" /> Semester: {course.semester}
             </p>
             <br/>
-            <Button as={Link} to={`/course/${course.courseID}`} >Go to course</Button>
+            <Button as={Link} to={`/course/${course.courseID}/${userID.userID}`} >Go to course</Button>
           </div>
         ))}
       </div>
