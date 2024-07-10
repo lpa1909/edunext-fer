@@ -3,13 +3,15 @@ import axios from 'axios';
 
 export const CourseContext = createContext();
 
-const CourseProvider = ({ children }) => {
+const CourseProvider = ({ children , courseData  }) => {
 
   const [courses, setCourses] = useState([]);
   const [inputAnswer, setInputAnswer] = useState('');
   const [answers, setAnswers] = useState([]);
   const [users, setUsers] = useState([]);
   const [classes, setClasses] = useState([]);
+  
+ console.log(courseData)
 
   useEffect(() => {
     const fetchCourses = async () => {
@@ -64,7 +66,7 @@ const addAnswer = async (questionId, userId, answer) => {
 
   return (
 
-    <CourseContext.Provider value={{ courses, classes, inputAnswer, setInputAnswer,answers, setAnswers, users, setUsers, addAnswer }}>
+    <CourseContext.Provider value={{courseData , courses, classes, inputAnswer, setInputAnswer,answers, setAnswers, users, setUsers, addAnswer }}>
 
       {children}
     </CourseContext.Provider>
