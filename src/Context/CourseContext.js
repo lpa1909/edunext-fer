@@ -12,7 +12,8 @@ const CourseProvider = ({ children , courseData  }) => {
   const [answers, setAnswers] = useState([]);
   const [users, setUsers] = useState([]);
   const [classes, setClasses] = useState([]);
-  
+  const [slots, setSlot] = useState([]);
+  const [questions, setQuestions] = useState([]);
  console.log(courseData)
 
   useEffect(() => {
@@ -24,6 +25,10 @@ const CourseProvider = ({ children , courseData  }) => {
         setAnswers(fetchAnswer.data);
         const fetchUser = await axios.get("http://localhost:9999/users");
         setUsers(fetchUser.data);
+        const fetchSlot = await axios.get('http://localhost:9999/slots');
+        setSlot(fetchSlot.data);
+        const fetchQuestion = await axios.get('http://localhost:9999/questions');
+        setQuestions(fetchQuestion.data);
       } catch (error) {
         console.error("Error fetching courses:", error);
       }
@@ -59,7 +64,8 @@ const CourseProvider = ({ children , courseData  }) => {
   };
 
   return (
-    <CourseContext.Provider value={{courseData , courses, classes, inputAnswer, setInputAnswer,answers, setAnswers, users, setUsers, addAnswer }}>
+
+    <CourseContext.Provider value={{courseData , courses, classes, inputAnswer, setInputAnswer,answers, setAnswers, users, setUsers, addAnswer , slots, setSlot, questions, setQuestions }}>
       {children}
     </CourseContext.Provider>
   );

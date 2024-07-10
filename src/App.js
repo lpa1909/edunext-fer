@@ -6,6 +6,7 @@ import Answer from './Components/Answer';
 import Login from './page/Login';
 import ViewCourse from './page/ViewCourse';
 import CourseProvider from './Context/CourseContext';
+import Course from './Components/Course/Course';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
               <Route path="/viewCourse/:id" element={<ViewCourse/>} />
               <Route path='/answer' element={<Answer/>}/>
               <Route path="/" element={<Login/>} />
+              <Route path="/course/:id" element={<Course/>}/>
             </Routes>
       </div>
 

@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { CourseContext } from '../Context/CourseContext';
 import '../Css/CourseCard.css';
+import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 import { FaBook, FaUserGraduate, FaChalkboardTeacher, FaUsers, FaBookReader } from 'react-icons/fa';
 
@@ -19,6 +21,7 @@ const CourseCard = () => {
     <div>
       <div className="app">
       </div>
+
       {courseData.length > 0 ? (
         <div className='course-container'>
         {courseArray.map(course => (
