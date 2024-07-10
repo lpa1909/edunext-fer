@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 import "../Css/Login.css";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-
+import { GoogleLogin } from '@react-oauth/google';
+import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -19,7 +20,7 @@ const Login = () => {
     try {
       console.log('Sending request to API');
       const response = await axios.get(
-        `http://localhost:9999/users?userName=${username}&password=${password}`
+        `http://localhost:9999/users?userName=${username}&password=${password}&campus=${campus}`
       );
       const user = response.data[0];
       console.log(user)
@@ -31,7 +32,7 @@ const Login = () => {
           navigate(`/viewCourse/${user.id}`);
         }
       } else {
-        alert("Tên đăng nhập hoặc mật khẩu không đúng.");
+        alert("Tài khoản của bạn không đăng nhập được.");
       }
     } catch (error) {
       console.error("Login failed", error);
@@ -40,9 +41,35 @@ const Login = () => {
   };
 
 
+  const loginGoogle = async (credentialResponse) => {
+    const decoded = jwtDecode(credentialResponse?.credential);
+
+
+    const response = await axios.get(
+      `http://localhost:9999/users?email=${decoded.email}`
+    );
+    const user = response.data[0];
+    console.log(user);
+    if (user) {
+      const classResponse = await axios.get(`http://localhost:9999/classes?classID=${user.classID}`);
+      const classData = classResponse.data[0];
+      if (classData) {
+
+        navigate(`/viewCourse/${user.id}`);
+      }
+    } else {
+      alert("Tài khoản của bạn không được phép đăng nhập vào hệ thống.");
+    }
+
+  }
+
+
 
   return (
+
+
     <div className="login-container">
+
       <div className="login-header">
         <img
           src="https://brademar.com/wp-content/uploads/2022/09/FPT-Logo-PNG.png"
@@ -52,13 +79,15 @@ const Login = () => {
         <h2>The social constructive learning tool</h2>
       </div>
       <div class="login-option">
-        <button class="google-button" >
-          <img
-            src="https://th.bing.com/th/id/R.7e557f1c0864829c54c300d15bee69f4?rik=fjZN1AYH30vXIw&riu=http%3a%2f%2fpngimg.com%2fuploads%2fgoogle%2fgoogle_PNG19635.png&ehk=ZmsumEtoeJQhKoUzQTZO2TEbYPBu0%2b7EFdjmJ3qljls%3d&risl=&pid=ImgRaw&r=0"
-            alt="Google Logo"
-          />{" "}
-          Sign in with Google
-        </button>
+        <GoogleLogin
+          onSuccess={credentialResponse => {
+            loginGoogle(credentialResponse);
+          }}
+          onError={() => {
+            console.log('Login Failed');
+          }}
+          useOneTap
+        />
         <button class="fpt-button">
           <img
             src="https://brademar.com/wp-content/uploads/2022/09/FPT-Logo-PNG.png"
@@ -67,6 +96,7 @@ const Login = () => {
           Sign in FEID
         </button>
       </div>
+      <br />
       <p className="vpn-warning">
         Select a campus before sigin in to the system with type username
       </p>
@@ -109,6 +139,7 @@ const Login = () => {
         </button>
       </form>
     </div>
+
   );
 }
 

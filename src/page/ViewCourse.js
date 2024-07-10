@@ -40,7 +40,7 @@ const ViewCourse = () => {
     <div className="app">
       <Header />
       <div className="main-content">
-        <Sidebar />
+        <Sidebar userID={id}/>
         <div className="content">
 
           {course !== null ? (
