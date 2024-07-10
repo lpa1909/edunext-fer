@@ -7,7 +7,8 @@
       "classID": 1,
       "userName": "a123",
       "password": "123",
-      "roleID": 1
+      "roleID": 1,
+      "id": "cafe"
     },
     {
       "userID": 2,
@@ -16,7 +17,8 @@
       "classID": 1,
       "userName": "a123",
       "password": "123",
-      "roleID": 1
+      "roleID": 1,
+      "id": "b206"
     }
   ],
   "courses": [
@@ -27,7 +29,8 @@
       "courseType": "edu_next_ltr_fpt_edu_02",
       "numOfStudents": 30,
       "courseCode": "SWT301",
-      "semester": "SUMMER2024"
+      "semester": "SUMMER2024",
+      "id": "fa2d"
     },
     {
       "courseID": 2,
@@ -36,7 +39,8 @@
       "courseType": "edu_next_ltr_fpt_edu_02",
       "numOfStudents": 30,
       "courseCode": "SWR302",
-      "semester": "SUMMER2024"
+      "semester": "SUMMER2024",
+      "id": "4d1e"
     },
     {
       "courseID": 3,
@@ -45,7 +49,8 @@
       "courseType": "edu_next_ltr_fpt_edu_02",
       "numOfStudents": 30,
       "courseCode": "FER202",
-      "semester": "SUMMER2024"
+      "semester": "SUMMER2024",
+      "id": "1f7d"
     },
     {
       "courseID": 4,
@@ -54,47 +59,8 @@
       "courseType": "edu_next_ltr_fpt_edu_02",
       "numOfStudents": 31,
       "courseCode": "SWP391",
-      "semester": "SUMMER2024"
-    }
-  ],
-  "answers": [
-    {
-      "answerID": 1,
-      "answerDetail": "Detailed explanation of answer 1",
-      "questionID": 1,
-      "gradePoint": 20,
-      "userID": 1
-    },
-    {
-      "answerID": 2,
-      "answerDetail": "Detailed explanation of answer 2",
-      "questionID": 2,
-      "gradePoint": 20,
-      "userID": 1
-    },
-    {
-      "id": "d660",
-      "answerID": 3,
-      "answerDetail": "haha",
-      "questionID": 1,
-      "gradePoint": "",
-      "userID": 1
-    },
-    {
-      "id": "6dc8",
-      "answerID": 4,
-      "answerDetail": "hoho",
-      "questionID": 1,
-      "gradePoint": "",
-      "userID": 1
-    },
-    {
-      "id": "2362",
-      "answerID": 5,
-      "answerDetail": "answer",
-      "questionID": 1,
-      "gradePoint": "",
-      "userID": 2
+      "semester": "SUMMER2024",
+      "id": "2123"
     }
   ],
   "questions": [
@@ -104,7 +70,8 @@
       "courseID": 1,
       "slotID": 1,
       "classID": 1,
-      "status": true
+      "status": true,
+      "id": "51c7"
     },
     {
       "questionID": 2,
@@ -112,13 +79,52 @@
       "courseID": 2,
       "slotID": 1,
       "classID": 1,
-      "status": false
+      "status": false,
+      "id": "637d"
+    }
+  ],
+  "answerM": [
+    {
+      "id": "6",
+      "answerDetail": "hoa",
+      "questionID": 1,
+      "gradePoint": 10,
+      "userID": 2
+    },
+    {
+      "id": "4",
+      "answerDetail": "lá",
+      "questionID": 1,
+      "gradePoint": 11,
+      "userID": 2
+    },
+    {
+      "id": "5",
+      "answerDetail": "canh",
+      "questionID": 1,
+      "gradePoint": 24,
+      "userID": 2
+    },
+    {
+      "id": "7",
+      "answerDetail": "",
+      "questionID": "",
+      "gradePoint": 4,
+      "userID": ""
+    },
+    {
+      "id": "8",
+      "answerDetail": "",
+      "questionID": "",
+      "gradePoint": 4,
+      "userID": ""
     }
   ],
   "classes": [
     {
       "classID": 1,
-      "className": "SE1835-NJ"
+      "className": "SE1835-NJ",
+      "id": "3121"
     }
   ],
   "slots": [
@@ -127,7 +133,8 @@
       "slotName": "Learn how to use vs code",
       "startTime": "10:00",
       "endTime": "11:00",
-      "courseID": 1
+      "courseID": 1,
+      "id": "29ab"
     }
   ]
 }

@@ -136,7 +136,6 @@
     opacity: 0.8;
 }
 
-  
   .stars-container {
     position: absolute;
     top: -20px;
@@ -147,14 +146,23 @@
     z-index: 10;
     margin: 10px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    
   }
   
   .star-item {
-    /* margin-right: 10px; */
     text-align: center;
-    /* border-right: 1px solid #ccc; */
     padding: 5px;
+    cursor: pointer;
+  }
+  .star-item:hover{
+    background-color: #F2F5F7;
+  }
+  .item1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  .item4{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
   }
   .item1, .item2, .item3{
     border-right: 1px solid #ccc;
