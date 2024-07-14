@@ -1,25 +1,33 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './Components/Sidebar';
-import CourseList from './Components/CourseList';
+
 import './App.css';
-import Header from './Components/Header';
+import Answer from './Components/Answer';
+import Login from './page/Login';
+import ViewCourse from './page/ViewCourse';
+import ViewProject from './page/ViewProject';
+import CourseProvider from './Context/CourseContext';
+import Course from './Components/Course/Course';
+
 
 function App() {
   return (
+    
+    <CourseProvider>
     <Router>
-      <div className="app">
-        <Header />
-        <div className="main-content">
-          <Sidebar />
-          <div className="content">
+      <div>
             <Routes>
-              <Route path="/" element={<CourseList />} />
+              <Route path="/viewCourse/:id" element={<ViewCourse/>} />
+              <Route path='/answer/:questionID/:userID' element={<Answer/>}/>
+              <Route path='/viewProject' element={<ViewProject/>}/>
+              <Route path="/" element={<Login/>} />
+              <Route path="/course/:id/:userID" element={<Course/>}/>
+              
             </Routes>
-          </div>
-        </div>
       </div>
+
     </Router>
+    </CourseProvider>
   );
 }
 

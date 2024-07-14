@@ -1,7 +1,5 @@
 .header {
-  width: calc(100% - 200px); /* Adjust width based on sidebar width */
-  margin-left: 200px; /* Align with sidebar */
-  padding: 10px 20px;
+  width: 100% ;/* Adjust width based on sidebar width */
   background-color: #fff;
   border-bottom: 1px solid #ccc;
   display: flex;
@@ -33,6 +31,7 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  width: 15%;
 }
 
 .semester-dropdown label {
