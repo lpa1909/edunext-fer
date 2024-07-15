@@ -5,6 +5,7 @@ import { CourseContext } from "../Context/CourseContext";
 import edunext from "../image/edunext.png";
 import axios from "axios";
 import { useParams } from 'react-router-dom';
+import Entry from "./Entry";
 
 const Answer = () => {
   const { answers, setAnswers, users, addAnswer, questions, setQuestions } = useContext(CourseContext);
@@ -89,6 +90,7 @@ const Answer = () => {
   return (
     <Container className="container">
       <Row>
+        <Col md={8}>
         <h1>(Question) 【CODE-91105】 CQ11.1</h1>
         <Col xs={12} md={8} className="question">
           <div className="question-content">
@@ -224,6 +226,13 @@ const Answer = () => {
               </div>
             );
           })}
+        </Col>
+        </Col>
+        
+        <Col md={4}>
+            <div>
+              <Entry/>
+            </div>      
         </Col>
       </Row>
     </Container>
