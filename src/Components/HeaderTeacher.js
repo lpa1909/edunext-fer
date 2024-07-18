@@ -3,7 +3,7 @@ import '../Css/Header.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from 'axios';
 
-const Header = ({semester,change}) => {
+const HeaderTeacher = ({semester,change}) => {
   const navigate = useNavigate();
   const [user, setUser] = useState([]);
   const [checkButton, setButton] = useState('active')
@@ -28,12 +28,12 @@ const Header = ({semester,change}) => {
   }, [id]);
 
   const handleToggleCourse = () => {
-    navigate(`/viewCourse/${id}`);
+    navigate(`/viewCourseTeacher/${id}`);
   }
  
 
   const handleToggleProject = () => {
-     navigate(`/viewProject/${id}`);
+     navigate(`/viewProjectTeacher/${id}`);
 
   }  
 
@@ -64,4 +64,4 @@ const Header = ({semester,change}) => {
   );
 };
 
-export default Header;
+export default HeaderTeacher;

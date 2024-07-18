@@ -3,15 +3,13 @@ import React, { useContext, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { CourseContext } from '../../Context/CourseContext';
 import { FaRegCalendarAlt } from "react-icons/fa";
-import { Button } from 'react-bootstrap';
 
-const SlotList = () => {
+const SlotListTeacher = () => {
     const context = useContext(CourseContext);
+    const { uid } = useParams();
     const { id } = useParams();
-    const {userID} = useParams();
-
     const { slots, questions } = context;
-    const filteredSlots = slots.filter(s => s.courseID === parseInt(id));
+    const filteredSlots = slots.filter(s => s.courseID === parseInt(uid));
 
     const [selectedSlotID, setSelectedSlotID] = useState(null);
     const [selectedQuestions, setSelectedQuestions] = useState([]);
@@ -32,8 +30,13 @@ const SlotList = () => {
             {filteredSlots.length > 0 ? (
                 filteredSlots.map(slot => (
                     <div key={slot.slotID} className="slot">
-                        <button className='slot-button' onClick={() => handleSlotClick(slot.slotID)}>
+
+                        <button className='slot-button' style={{position:'relative'}} onClick={() => handleSlotClick(slot.slotID)}>
+                            <div style={{ color: 'blue', position:'absolute',top:'15px',right:'30px' }}>
+                                <Link style={{fontWeight:'600',fontSize:'20px', textDecoration:'none'}} to={`/viewSlot/${id}/${slot.slotID}/${uid}`}>View Slot</Link>
+                            </div>
                             <strong className='slot-name'>{slot.slotName}</strong> <br />
+
                             <div className='slot-date'>
                                 <FaRegCalendarAlt />
                                 <span>{slot.startTime} {slot.date} - {slot.endTime} {slot.date}</span>
@@ -45,20 +48,17 @@ const SlotList = () => {
                                     ))}
                                 </span>
                             </div>
+
                         </button>
+
                         <div className=''>
                             {selectedSlotID === slot.slotID && (
                                 <div className="question-list">
                                     <h4>Questions:</h4>
                                     {selectedQuestions.length > 0 ? (
-                                        selectedQuestions.map((question, index)=> (
+                                        selectedQuestions.map((question) => (
                                             <div key={question.questionID} className="question">
-<<<<<<< Updated upstream
-                                                <button className='question-button'><Link to={`/answer/${question.questionID}/${userID}`}>Q{question.questionID} {question.questionName}</Link></button>
-                                                {/* <Button className='question-button' as={Link} to={`/answer/${question.questionID}`}></Button> */}
-=======
-                                                <button>Q{index+1} {question.questionName}</button>
->>>>>>> Stashed changes
+                                                <button>Q{question.questionID} {question.questionName}</button>
                                             </div>
                                         ))
                                     ) : (
@@ -67,7 +67,8 @@ const SlotList = () => {
                                 </div>
                             )}
                         </div>
-                        
+
+
                     </div>
                 ))
             ) : (
@@ -77,4 +78,4 @@ const SlotList = () => {
     );
 }
 
-export default SlotList;
+export default SlotListTeacher;

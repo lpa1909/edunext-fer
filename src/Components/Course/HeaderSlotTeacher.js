@@ -3,27 +3,29 @@ import React, { useContext } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import '../../Css/HeaderCourse.css';
 
-const HeaderCourse = () => {
+const HeaderSlotTeacher = () => {
   const context = useContext(CourseContext);
   const { id } = useParams();
+  const { uid } = useParams();
+  const { cid } = useParams();
 
   if (!context) {
     return <h2>Context not available</h2>;
   }
 
-  const { courses } = context;
-  const course = courses.find(c => c.courseID === parseInt(id));
+  const { courses,slots } = context;
+  const slot = slots.find(c => c.slotID === parseInt(uid));
   
 
-  if (!course) {
+  if (!slot) {
     return <h2>Course not found</h2>;
   }
   return (
     <div className="header-course">
-      <Link to={`/viewCourse/}`}>Home</Link>
-      <span> / {course.courseCode} - {course.courseName}</span>
+      <Link to={`/viewCourseTeacher/${id}`}>Home</Link>
+      <span> / <Link to={`/courseTeacher/${cid}/${id}`}>{slot.slotName}</Link> / {slot.title[0]}</span>
     </div>
   );
 };
 
-export default HeaderCourse;
+export default HeaderSlotTeacher;
