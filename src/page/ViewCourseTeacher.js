@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../Components/Sidebar';
 import '../App.css';
-import Header from '../Components/Header';
-import CourseCard from '../Components/CourseCard';
 import CourseProvider from '../Context/CourseContext';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import HeaderTeacher from '../Components/HeaderTeacher';
+import SidebarTeacher from '../Components/SidebarTeacher';
+import CourseCardTeacher from '../Components/CourseCardTeacher';
 
-const ViewCourse = () => {
+const ViewCourseTeacher = () => {
   const { id } = useParams();
   const [course, setCourse] = useState([]);
   const [user, setUser] = useState([]);
@@ -22,7 +22,7 @@ const ViewCourse = () => {
       setUser(userData);
       try {
         const courseResponse = await axios.get(
-          `http://localhost:9999/courses?classID=${userData.classID}`
+          `http://localhost:9999/courses?TeacherName=${userData.email}`
         );
         const coursesData = courseResponse.data;
         setCourse(coursesData);
@@ -50,22 +50,17 @@ const ViewCourse = () => {
 
   return (
     <div className="app">
-      <Header semester={semester} change={changeTodo} />
+      <HeaderTeacher semester={semester} change={changeTodo} />
       <div className="main-content">
-        <Sidebar userID={id}/>
+        <SidebarTeacher userID={id}/>
         <div className="content">
 
           {course !== null ? (
-<<<<<<< Updated upstream
-            <CourseProvider courseData={course}>
-              <CourseCard userID={id}/>  
-=======
             <CourseProvider courseData={filterCourse}>
-              <CourseCard idC={id}/>  
->>>>>>> Stashed changes
+              <CourseCardTeacher idc={id}/>  
             </CourseProvider>
           ) : (
-            <p>Bạn chưa có lớp học cho kì này</p>
+            <p>Bạn chưa có lớp dạy cho kì này</p>
           )}
 
 
@@ -76,4 +71,4 @@ const ViewCourse = () => {
   );
 }
 
-export default ViewCourse;
+export default ViewCourseTeacher;

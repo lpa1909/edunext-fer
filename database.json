@@ -1,17 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Nguyen Van A",
-      "age": 20,
-      "classID": 1,
-      "userName": "a123",
-      "password": "123",
-      "roleID": 1,
-      "email": "anlphe176714@fpt.edu.vn",
-      "campus": "hola"
-    },
-    {
       "id": 2,
       "name": "Jane Smith",
       "age": 22,
@@ -32,6 +21,51 @@
       "roleID": 1,
       "email": "cccccc@fpt.edu.vn",
       "campus": "hola"
+    },
+    {
+      "id": 4,
+      "name": "PhuongChi",
+      "age": 21,
+      "classID": 1,
+      "userName": "hoang",
+      "password": "123456",
+      "roleID": 1,
+      "email": "chihphe176407@fpt.edu.vn",
+      "campus": "hola"
+    },
+    {
+      "id": 5,
+      "name": "HoangPhuongChi",
+      "age": 21,
+      "classID": 1,
+      "userName": "hoang",
+      "password": "123456",
+      "roleID": 3,
+      "email": "hpcc7069@gmail.com",
+      "campus": "hola"
+    },
+    {
+      "id": "6",
+      "name": "Hung admin",
+      "age": 24,
+      "classID": 1,
+      "userName": "admin",
+      "password": "9999",
+      "roleID": 2,
+      "email": "admin@fpt.edu.vn",
+      "campus": "hola"
+    }
+  ],
+  "roles": [
+    {
+      "roleID": 1,
+      "roleName": "student",
+      "id": "7c64"
+    },
+    {
+      "roleID": 2,
+      "roleName": "admin",
+      "id": "55cb"
     }
   ],
   "courses": [
@@ -43,7 +77,8 @@
       "numOfStudents": 30,
       "courseCode": "SWT301",
       "semester": "SUMMER2024",
-      "id": "fa2d"
+      "id": "fa2d",
+      "TeacherName": "hpcc7069@gmail.com"
     },
     {
       "courseID": 2,
@@ -53,7 +88,8 @@
       "numOfStudents": 30,
       "courseCode": "SWR302",
       "semester": "SUMMER2024",
-      "id": "4d1e"
+      "id": "4d1e",
+      "TeacherName": "hpcc7069@gmail.com"
     },
     {
       "courseID": 3,
@@ -63,7 +99,8 @@
       "numOfStudents": 30,
       "courseCode": "FER202",
       "semester": "SUMMER2024",
-      "id": "1f7d"
+      "id": "1f7d",
+      "TeacherName": "hoannn6@fpt.edu.vn"
     },
     {
       "courseID": 4,
@@ -73,19 +110,11 @@
       "numOfStudents": 31,
       "courseCode": "SWP391",
       "semester": "SUMMER2024",
-      "id": "2123"
+      "id": "2123",
+      "TeacherName": "hpcc7069@gmail.com"
     }
   ],
   "questions": [
-    {
-      "questionID": 1,
-      "questionName": "Why is testing necessary?",
-      "courseID": 1,
-      "slotID": 1,
-      "classID": 1,
-      "status": true,
-      "id": "51c7"
-    },
     {
       "questionID": 2,
       "questionName": "What is testing?",
@@ -93,7 +122,11 @@
       "slotID": 1,
       "classID": 1,
       "status": true,
+<<<<<<< Updated upstream
       "id": "2f43"
+=======
+      "id": "54"
+>>>>>>> Stashed changes
     },
     {
       "questionID": 3,
@@ -102,7 +135,11 @@
       "slotID": 1,
       "classID": 1,
       "status": true,
+<<<<<<< Updated upstream
       "id": "5307"
+=======
+      "id": "5c7"
+>>>>>>> Stashed changes
     },
     {
       "questionID": 1,
@@ -111,7 +148,11 @@
       "slotID": 2,
       "classID": 1,
       "status": true,
+<<<<<<< Updated upstream
       "id": "81a8"
+=======
+      "id": "5sa"
+>>>>>>> Stashed changes
     },
     {
       "questionID": 2,
@@ -120,7 +161,11 @@
       "slotID": 2,
       "classID": 1,
       "status": true,
+<<<<<<< Updated upstream
       "id": "da80"
+=======
+      "id": "2324"
+>>>>>>> Stashed changes
     },
     {
       "questionID": 3,
@@ -129,6 +174,7 @@
       "slotID": 2,
       "classID": 1,
       "status": true,
+<<<<<<< Updated upstream
       "id": "6061"
     },
     {
@@ -346,6 +392,9 @@
       "classID": 1,
       "status": true,
       "id": "47d3"
+=======
+      "id": "234szd"
+>>>>>>> Stashed changes
     },
     {
       "questionID": 1,
@@ -354,7 +403,47 @@
       "slotID": 11,
       "classID": 1,
       "status": true,
+<<<<<<< Updated upstream
       "id": "53de"
+=======
+      "id": "51cvd"
+    },
+    {
+      "questionID": 1,
+      "questionName": "Why is testing necessary?",
+      "courseID": 1,
+      "slotID": 2,
+      "classID": 1,
+      "status": false,
+      "id": 0.6189835971617375
+    },
+    {
+      "questionID": 1,
+      "questionName": "What are the differences between testing and debugging?",
+      "courseID": 1,
+      "slotID": 1,
+      "classID": 1,
+      "status": false,
+      "id": 1
+    },
+    {
+      "questionID": 1,
+      "questionName": "hpc",
+      "courseID": 1,
+      "slotID": 1,
+      "classID": 1,
+      "status": true,
+      "id": 202
+    },
+    {
+      "questionID": 1,
+      "questionName": "hahaha",
+      "courseID": 1,
+      "slotID": 1,
+      "classID": 1,
+      "status": true,
+      "id": 893
+>>>>>>> Stashed changes
     }
   ],
   "answerM": [

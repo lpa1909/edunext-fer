@@ -5,7 +5,7 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import { Link, useNavigate, useParams } from "react-router-dom";
 import axios from 'axios';
 
-const Sidebar = (userID) => {
+const SidebarTeacher = (userID) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [user, setUser] = useState([]);
   const { id } = useParams();
@@ -57,7 +57,7 @@ const Sidebar = (userID) => {
   }
 
   const handleHome = () => {
-    navigate(`/viewCourse/${id}`);
+    navigate(`/viewCourseTeacher/${id}`);
   }
 
   
@@ -97,4 +97,4 @@ const Sidebar = (userID) => {
   );
 };
 
-export default Sidebar;
+export default SidebarTeacher;

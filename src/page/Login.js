@@ -29,7 +29,13 @@ const Login = () => {
         const classData = classResponse.data[0];
         if (classData) {
 
-          navigate(`/viewCourse/${user.id}`);
+          if(user.roleID == 1){
+            navigate(`/viewCourse/${user.id}`);
+          } else if(user.roleID == 2){
+            navigate(`/admin-dashboard`);
+          } else{
+            navigate(`/viewCourseTeacher/${user.id}`);
+          }
         }
       } else {
         alert("Tài khoản của bạn không đăng nhập được.");
@@ -55,7 +61,13 @@ const Login = () => {
       const classData = classResponse.data[0];
       if (classData) {
 
-        navigate(`/viewCourse/${user.id}`);
+        if(user.roleID == 1){
+          navigate(`/viewCourse/${user.id}`);
+        } else if(user.roleID == 2){
+          navigate(`/admin/${user.id}`);
+        } else{
+          navigate(`/viewCourseTeacher/${user.id}`);
+        }
       }
     } else {
       alert("Tài khoản của bạn không được phép đăng nhập vào hệ thống.");

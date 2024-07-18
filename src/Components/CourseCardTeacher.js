@@ -6,15 +6,9 @@ import { Button } from 'react-bootstrap';
 import { FaBook, FaUserGraduate, FaChalkboardTeacher, FaUsers, FaBookReader } from 'react-icons/fa';
 
 
-<<<<<<< Updated upstream
-const CourseCard = (userID) => {
-=======
-const CourseCard = ({idC}) => {
->>>>>>> Stashed changes
+const CourseCardTeacher = ({idc}) => {
   const { courseData, classes } = useContext(CourseContext);
   const courseArray = Object.values(courseData)
-
-  console.log("userID: ", userID.userID);
 
   console.log(courseArray.length)
   const getClassName = (classID) => {
@@ -41,7 +35,7 @@ const CourseCard = ({idC}) => {
               <FaChalkboardTeacher className="course-icon" /> Semester: {course.semester}
             </p>
             <br/>
-            <Button as={Link} to={`/course/${course.courseID}/${userID.userID}`} >Go to course</Button>
+            <Button as={Link} to={`/courseTeacher/${course.courseID}/${idc}`} >Go to course</Button>
           </div>
         ))}
       </div>
@@ -54,4 +48,4 @@ const CourseCard = ({idC}) => {
   );
 };
 
-export default CourseCard;
+export default CourseCardTeacher;
