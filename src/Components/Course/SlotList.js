@@ -1,13 +1,13 @@
 import '../../Css/SlotList.css';
 import React, { useContext, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { CourseContext } from '../../Context/CourseContext';
 import { FaRegCalendarAlt } from "react-icons/fa";
 
 const SlotList = () => {
     const context = useContext(CourseContext);
     const { id } = useParams();
-
+    const {userID} = useParams();
     const { slots, questions } = context;
     const filteredSlots = slots.filter(s => s.courseID === parseInt(id));
 
@@ -49,9 +49,10 @@ const SlotList = () => {
                                 <div className="question-list">
                                     <h4>Questions:</h4>
                                     {selectedQuestions.length > 0 ? (
-                                        selectedQuestions.map((question)=> (
+                                        selectedQuestions.map((question, index)=> (
                                             <div key={question.questionID} className="question">
-                                                <button>Q{question.questionID} {question.questionName}</button>
+                                                <button className='question-button'><Link to={`/answer/${question.questionID}/${userID}`}>Q{index + 1} {question.questionName}</Link></button>
+                                                {/* <Button className='question-button' as={Link} to={`/answer/${question.questionID}`}></Button> */}
                                             </div>
                                         ))
                                     ) : (

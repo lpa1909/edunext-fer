@@ -4,9 +4,17 @@ import "../Css/Answer.css";
 import { CourseContext } from "../Context/CourseContext";
 import edunext from "../image/edunext.png";
 import axios from "axios";
+import { useParams } from 'react-router-dom';
+import Entry from "./Entry";
 
 const Answer = () => {
-  const { answers, setAnswers, users, addAnswer } = useContext(CourseContext);
+  const { answers, setAnswers, users, addAnswer, questions, setQuestions } = useContext(CourseContext);
+  const [hover, setHover] = useState(null);
+  const starMenuRef = useRef(null);
+  const {questionID, userID} = useParams();
+  const question = questions.find(q => q.questionID == questionID);
+  const user = users.find(u => users.id == userID);
+
   const [answer, setAnswer] = useState({
     id: "",
     answerDetail: "",
@@ -14,6 +22,9 @@ const Answer = () => {
     gradePoint: "",
     userID: "",
   });
+  if (!question) {
+    return <h2>Question not found</h2>;
+  }
 
   const handleChange = (e) => {
     setAnswer({ ...answer, [e.target.name]: e.target.value });
@@ -21,9 +32,9 @@ const Answer = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const questionId = 1;
-    const userId = 2;
-    addAnswer(questionId, userId, answer);
+    
+    
+    addAnswer(question.questionID, userID, answer);
     setAnswer({
       id: "",
       answerDetail: "",
@@ -33,8 +44,7 @@ const Answer = () => {
     });
   };
 
-  const [hover, setHover] = useState(null);
-  const starMenuRef = useRef(null);
+ 
 
   const handleMouseEnterVote = (answerID) => {
     setHover(answerID);
@@ -57,15 +67,18 @@ const Answer = () => {
   const handleOnClick = async (answerID, grade) => {
     try {
         const answerUpdate = answers.find(a => a.id == answerID);
+        
         console.log("answerUpdate: ", answerUpdate);
         if(!answerUpdate){
             console.log("answer is not valid");
             return;
         }
+        const currentGradePoint = answerUpdate.gradePoint !== null ? parseInt(answerUpdate.gradePoint) : 0;
       const response = await axios.put(`http://localhost:9999/answerM/${answerID}`, { 
         ...answerUpdate,
-        gradePoint: parseInt(answerUpdate.gradePoint) + grade, 
+        gradePoint: currentGradePoint + grade, 
     });
+    console.log("data" ,response.data);
       setAnswers((prevAnswers) =>
         prevAnswers.map((a) => (a.id === answerID ? response.data : a))
       );
@@ -81,14 +94,13 @@ const Answer = () => {
   return (
     <Container className="container">
       <Row>
+        <Col md={8}>
         <h1>(Question) 【CODE-91105】 CQ11.1</h1>
         <Col xs={12} md={8} className="question">
           <div className="question-content">
             <h2 className="content-heading">Content</h2>
             <p className="content-question">
-              Which functions/screens have you completed and ready for
-              demonstrating in the last iteration? What are pending issues with
-              each of those?
+              {question.questionName}
             </p>
           </div>
         </Col>
@@ -112,7 +124,7 @@ const Answer = () => {
             <span>TEACHER/S MESSAGE</span>
           </div>
         </Col>
-        <Col>
+        <Col xs={12} md={8}>
           <Form className="form-input" onSubmit={handleSubmit}>
             <Form.Group className="select">
               <Form.Control
@@ -144,7 +156,7 @@ const Answer = () => {
         </Col>
         <Col xs={12} md={8} className="detail-answer">
           {answers.map((a) => {
-            const user = users.find((u) => u.userID === a.userID);
+            const user = users.find((u) => u.id == a.userID);
             return (
               <div className="user" key={a.id}>
                 <div className="icon">
@@ -218,6 +230,13 @@ const Answer = () => {
               </div>
             );
           })}
+        </Col>
+        </Col>
+        
+        <Col md={4}>
+            <div>
+              <Entry/>
+            </div>      
         </Col>
       </Row>
     </Container>

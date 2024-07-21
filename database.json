@@ -1,17 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "name": "Nguyen Van A",
-      "age": 20,
-      "classID": 1,
-      "userName": "a123",
-      "password": "123",
-      "roleID": 1,
-      "email": "anlphe176714@fpt.edu.vn",
-      "campus": "hola"
-    },
-    {
       "id": 2,
       "name": "Jane Smith",
       "age": 22,
@@ -32,6 +21,39 @@
       "roleID": 1,
       "email": "cccccc@fpt.edu.vn",
       "campus": "hola"
+    },
+    {
+      "id": 4,
+      "name": "PhuongChi",
+      "age": 21,
+      "classID": 1,
+      "userName": "hoang",
+      "password": "123456",
+      "roleID": 1,
+      "email": "chihphe176407@fpt.edu.vn",
+      "campus": "hola"
+    },
+    {
+      "id": 5,
+      "name": "HoangPhuongChi",
+      "age": 21,
+      "classID": 1,
+      "userName": "hoang",
+      "password": "123456",
+      "roleID": 3,
+      "email": "hpcc7069@gmail.com",
+      "campus": "hola"
+    },
+    {
+      "id": "6",
+      "name": "Hung admin",
+      "age": 24,
+      "classID": 1,
+      "userName": "admin",
+      "password": "9999",
+      "roleID": 2,
+      "email": "admin@fpt.edu.vn",
+      "campus": "hola"
     }
   ],
   "courses": [
@@ -43,7 +65,8 @@
       "numOfStudents": 30,
       "courseCode": "SWT301",
       "semester": "SUMMER2024",
-      "id": "fa2d"
+      "id": "fa2d",
+      "TeacherName": "hpcc7069@gmail.com"
     },
     {
       "courseID": 2,
@@ -53,7 +76,8 @@
       "numOfStudents": 30,
       "courseCode": "SWR302",
       "semester": "SUMMER2024",
-      "id": "4d1e"
+      "id": "4d1e",
+      "TeacherName": "hpcc7069@gmail.com"
     },
     {
       "courseID": 3,
@@ -63,7 +87,8 @@
       "numOfStudents": 30,
       "courseCode": "FER202",
       "semester": "SUMMER2024",
-      "id": "1f7d"
+      "id": "1f7d",
+      "TeacherName": "hoannn6@fpt.edu.vn"
     },
     {
       "courseID": 4,
@@ -73,27 +98,19 @@
       "numOfStudents": 31,
       "courseCode": "SWP391",
       "semester": "SUMMER2024",
-      "id": "2123"
+      "id": "2123",
+      "TeacherName": "hpcc7069@gmail.com"
     }
   ],
   "questions": [
-    {
-      "questionID": 1,
-      "questionName": "Why is testing necessary?",
-      "courseID": 1,
-      "slotID": 1,
-      "classID": 1,
-      "status": true,
-      "id": "51c7"
-    },
     {
       "questionID": 2,
       "questionName": "What is testing?",
       "courseID": 2,
       "slotID": 1,
       "classID": 1,
-
-      "status": true
+      "status": true,
+      "id": "54"
     },
     {
       "questionID": 3,
@@ -101,7 +118,8 @@
       "courseID": 2,
       "slotID": 1,
       "classID": 1,
-      "status": true
+      "status": true,
+      "id": "5c7"
     },
     {
       "questionID": 1,
@@ -109,7 +127,8 @@
       "courseID": 1,
       "slotID": 2,
       "classID": 1,
-      "status": true
+      "status": true,
+      "id": "5sa"
     },
     {
       "questionID": 2,
@@ -117,7 +136,8 @@
       "courseID": 1,
       "slotID": 2,
       "classID": 1,
-      "status": true
+      "status": true,
+      "id": "2324"
     },
     {
       "questionID": 3,
@@ -125,7 +145,8 @@
       "courseID": 1,
       "slotID": 2,
       "classID": 1,
-      "status": true
+      "status": true,
+      "id": "234szd"
     },
     {
       "questionID": 1,
@@ -133,8 +154,44 @@
       "courseID": 1,
       "slotID": 11,
       "classID": 1,
-      "status": true
-
+      "status": true,
+      "id": "51cvd"
+    },
+    {
+      "questionID": 1,
+      "questionName": "Why is testing necessary?",
+      "courseID": 1,
+      "slotID": 2,
+      "classID": 1,
+      "status": false,
+      "id": 0.6189835971617375
+    },
+    {
+      "questionID": 1,
+      "questionName": "What are the differences between testing and debugging?",
+      "courseID": 1,
+      "slotID": 1,
+      "classID": 1,
+      "status": false,
+      "id": 1
+    },
+    {
+      "questionID": 1,
+      "questionName": "hpc",
+      "courseID": 1,
+      "slotID": 1,
+      "classID": 1,
+      "status": true,
+      "id": 202
+    },
+    {
+      "questionID": 1,
+      "questionName": "hahaha",
+      "courseID": 1,
+      "slotID": 1,
+      "classID": 1,
+      "status": true,
+      "id": 893
     }
   ],
   "answerM": [
@@ -159,13 +216,12 @@
       "gradePoint": 24,
       "userID": 2
     }
-
   ],
   "classes": [
     {
       "classID": 1,
       "className": "SE1835-NJ"
-    }, 
+    },
     {
       "classID": 2,
       "className": "SE1837-NJ"
@@ -178,14 +234,14 @@
       "startTime": "07:30",
       "endTime": "09:30",
       "courseID": 1,
-      "title":[
-                  "Course Introduction",
-                  "Topic 1. Fundamentals of testing",
-                  "1.1 Why is testing necessary?" ,
-                  "1.2 What is testing?",
-                  "1.3 Testing principles",
-                  "1.4 Fundamental test process"
-                ],
+      "title": [
+        "Course Introduction",
+        "Topic 1. Fundamentals of testing",
+        "1.1 Why is testing necessary?",
+        "1.2 What is testing?",
+        "1.3 Testing principles",
+        "1.4 Fundamental test process"
+      ],
       "date": "08/05/2024"
     },
     {
@@ -194,11 +250,11 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 1,
-      "title":[
-                  "1.5 The psychology of testing",
-                  "1.5 The psychology of testing (cont.)",
-                  "1.6 Codes of ethics" 
-                ],
+      "title": [
+        "1.5 The psychology of testing",
+        "1.5 The psychology of testing (cont.)",
+        "1.6 Codes of ethics"
+      ],
       "date": "10/05/2024"
     },
     {
@@ -207,12 +263,12 @@
       "startTime": "07:30",
       "endTime": "09:30",
       "courseID": 1,
-      "title":[
-                  "Topic 2. Testing throughout the software life cycle",
-                  "2.1 Software development models",
-                  "2.2 Test levels" ,
-                  "2.2 Test levels (cont.)"
-                ],
+      "title": [
+        "Topic 2. Testing throughout the software life cycle",
+        "2.1 Software development models",
+        "2.2 Test levels",
+        "2.2 Test levels (cont.)"
+      ],
       "date": "15/05/2024"
     },
     {
@@ -221,11 +277,11 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 1,
-      "title":[
-                  "Lab Introduction",
-                  "2.3 Test types: the targets of testing",
-                  "2.3 Test types: the targets of testing (cont.)" 
-                ],
+      "title": [
+        "Lab Introduction",
+        "2.3 Test types: the targets of testing",
+        "2.3 Test types: the targets of testing (cont.)"
+      ],
       "date": "17/05/2024"
     },
     {
@@ -234,13 +290,13 @@
       "startTime": "07:30",
       "endTime": "09:30",
       "courseID": 1,
-      "title":[
-                  "Guiding Lab 1 (Create Test Plan)",
-                  "Progress test 1",
-                  "Topic 3. Static techniques" ,
-                  "3.1 Reviews and the test process",
-                  "3.2 Review process"
-                ],
+      "title": [
+        "Guiding Lab 1 (Create Test Plan)",
+        "Progress test 1",
+        "Topic 3. Static techniques",
+        "3.1 Reviews and the test process",
+        "3.2 Review process"
+      ],
       "date": "22/05/2024"
     },
     {
@@ -249,15 +305,15 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 1,
-      "title":[
-                  "Topic 3. Static techniques",
-                  "3.1 Reviews and the test process",
-                  "3.2 Review process (cont.)" ,
-                  "Topic 3. Static techniques",
-                  "3.1 Reviews and the test process",
-                  "3.2 Review process (cont.)",
-                  "3.3 Static analysis by tools"
-                ],
+      "title": [
+        "Topic 3. Static techniques",
+        "3.1 Reviews and the test process",
+        "3.2 Review process (cont.)",
+        "Topic 3. Static techniques",
+        "3.1 Reviews and the test process",
+        "3.2 Review process (cont.)",
+        "3.3 Static analysis by tools"
+      ],
       "date": "24/05/2024"
     },
     {
@@ -266,26 +322,26 @@
       "startTime": "07:30",
       "endTime": "09:30",
       "courseID": 1,
-      "title":[
-                  "Lab 1 Assitant",
-                  "Guiding Lab 2 (Staic Analysis by tools)",
-                  "Guiding Lab 2 (Staic Analysis by tools) (cont.)" 
-                ],
+      "title": [
+        "Lab 1 Assitant",
+        "Guiding Lab 2 (Staic Analysis by tools)",
+        "Guiding Lab 2 (Staic Analysis by tools) (cont.)"
+      ],
       "date": "29/05/2024"
     },
     {
-      "slotID":8 ,
+      "slotID": 8,
       "slotName": "Slot 8",
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 1,
-      "title":[
-                  "Topic 4. Test design techniques",
-                  "4.1 The test development process",
-                  "4.1 The test development process (cont.)" ,
-                  "4.2 Categories of test design techniques",
-                  "4.3 Specification-based or black-box techniques"
-                ],
+      "title": [
+        "Topic 4. Test design techniques",
+        "4.1 The test development process",
+        "4.1 The test development process (cont.)",
+        "4.2 Categories of test design techniques",
+        "4.3 Specification-based or black-box techniques"
+      ],
       "date": "31/05/2024"
     },
     {
@@ -294,29 +350,29 @@
       "startTime": "07:30",
       "endTime": "09:30",
       "courseID": 1,
-      "title":[
-                  "Lab 2 Assitant",
-                  "Automation Test Tool",
-                  "(Use tools: NUnit, JUnit, Selenium .. )" ,
-                  "Defect Management System: Mantis, bugzilla,…",
-                  "Automation Test Tool",
-                  "(Use tools: NUnit, JUnit, Selenium .. )",
-                  "Defect Management System: Mantis, bugzilla,… (cont.)"
-                ],
+      "title": [
+        "Lab 2 Assitant",
+        "Automation Test Tool",
+        "(Use tools: NUnit, JUnit, Selenium .. )",
+        "Defect Management System: Mantis, bugzilla,…",
+        "Automation Test Tool",
+        "(Use tools: NUnit, JUnit, Selenium .. )",
+        "Defect Management System: Mantis, bugzilla,… (cont.)"
+      ],
       "date": "5/06/2024"
     },
     {
-      "slotID":10 ,
+      "slotID": 10,
       "slotName": "Slot 10",
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 1,
-      "title":[
-                  "4.4 Structure-based or white-box techniques",
-                  "4.5 Experience-based techniques",
-                  "4.6 Choosing a test technique" ,
-                  "Guiding Lab 3 (Unit Test)"
-                ],
+      "title": [
+        "4.4 Structure-based or white-box techniques",
+        "4.5 Experience-based techniques",
+        "4.6 Choosing a test technique",
+        "Guiding Lab 3 (Unit Test)"
+      ],
       "date": "31/05/2024"
     },
     {
@@ -325,19 +381,19 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 2,
-      "title":[
-                  "Course Introduction",
-                  "The essential of software requirement",
-                  "- Software requirements defined" ,
-                  "The essential of software requirement (cnt)",
-                  "- Requirements development and management",
-                  "- When bad requirements happen to good people",
-                  "- Benefits from a high-quality requirements process",
-                  "Requirements from the customer’s perspective",
-                  "- Who is the customer?",
-                  "- The customer-development partnership",
-                  "- Creating a culture that respects requirement"
-                ],
+      "title": [
+        "Course Introduction",
+        "The essential of software requirement",
+        "- Software requirements defined",
+        "The essential of software requirement (cnt)",
+        "- Requirements development and management",
+        "- When bad requirements happen to good people",
+        "- Benefits from a high-quality requirements process",
+        "Requirements from the customer’s perspective",
+        "- Who is the customer?",
+        "- The customer-development partnership",
+        "- Creating a culture that respects requirement"
+      ],
       "date": "08/05/2024"
     },
     {
@@ -346,19 +402,19 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 2,
-      "title":[
-                  "Requirements from the customer’s perspective (cnt)",
-                  "- Identifying decision makers",
-                  "Assignment introduction" ,
-                  "Good practices for requirements engineering (introduce)",
-                  "- A requirements development process framework",
-                  "- Requirements elicitation",
-                  "- Requirements analysis",
-                  "- Requirements specification",
-                  "- Requirements validation",
-                  "- Requirements management",
-                  "Good practices for requirements engineering (practice/apply)"
-                ],
+      "title": [
+        "Requirements from the customer’s perspective (cnt)",
+        "- Identifying decision makers",
+        "Assignment introduction",
+        "Good practices for requirements engineering (introduce)",
+        "- A requirements development process framework",
+        "- Requirements elicitation",
+        "- Requirements analysis",
+        "- Requirements specification",
+        "- Requirements validation",
+        "- Requirements management",
+        "Good practices for requirements engineering (practice/apply)"
+      ],
       "date": "10/05/2024"
     },
     {
@@ -367,19 +423,19 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 2,
-      "title":[
-                  "Group discussion",
-                  "Summary and Exercises (groups)",
-                  "Group discussion" ,
-                  "Summary and Exercises (groups)",
-                  "The business analyst",
-                  "- The business analyst role",
-                  "- The business analyst’s tasks",
-                  "- Essential analyst skills",
-                  "- Essential analyst knowledge",
-                  "- The making of a business analyst",
-                  "- The analyst role on agile projects"
-                ],
+      "title": [
+        "Group discussion",
+        "Summary and Exercises (groups)",
+        "Group discussion",
+        "Summary and Exercises (groups)",
+        "The business analyst",
+        "- The business analyst role",
+        "- The business analyst’s tasks",
+        "- Essential analyst skills",
+        "- Essential analyst knowledge",
+        "- The making of a business analyst",
+        "- The analyst role on agile projects"
+      ],
       "date": "15/05/2024"
     },
     {
@@ -388,42 +444,41 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 2,
-      "title":[
-                  "Establishing the business requirements",
-                  "- Defining business requirements",
-                  "- Vision and scope document" ,
-                  "- Scope representation techniques",
-                  "Establishing the business requirements (con't)",
-                  "- Keeping the scope in focus",
-                  "- Vision and scope on agile projects",
-                  "Finding the voice of users",
-                  "- User classes",
-                  "- User personal",
-                  "- Connecting with user representatives",
-                  "- The product champion",
-                  "- User representation on agile project",
-                  "- Resolving conflicting requirements"
-                ],
+      "title": [
+        "Establishing the business requirements",
+        "- Defining business requirements",
+        "- Vision and scope document",
+        "- Scope representation techniques",
+        "Establishing the business requirements (con't)",
+        "- Keeping the scope in focus",
+        "- Vision and scope on agile projects",
+        "Finding the voice of users",
+        "- User classes",
+        "- User personal",
+        "- Connecting with user representatives",
+        "- The product champion",
+        "- User representation on agile project",
+        "- Resolving conflicting requirements"
+      ],
       "date": "17/05/2024"
     },
     {
       "slotID": 21,
       "slotName": "Slot 1",
       "startTime": "10:00",
-
       "endTime": "12:20",
       "courseID": 3,
-      "title":[
-                    "1.1 Full Stack Web Development: The Big Picture",
-                    "1.2 React 18 Introduction",
-                    "1.3 Git",
-                    "- Setting up Git",
-                    "- Basic Git Commands",
-                    "- Setting up an Online Git repository",
-                    "1.4 Node.js and NPM",
-                    "- Setting up Node.js and NPM",
-                    "- Basics of Node.js and NPM"
-                ],
+      "title": [
+        "1.1 Full Stack Web Development: The Big Picture",
+        "1.2 React 18 Introduction",
+        "1.3 Git",
+        "- Setting up Git",
+        "- Basic Git Commands",
+        "- Setting up an Online Git repository",
+        "1.4 Node.js and NPM",
+        "- Setting up Node.js and NPM",
+        "- Basics of Node.js and NPM"
+      ],
       "date": "06/05/2024"
     },
     {
@@ -432,12 +487,12 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 3,
-      "title":[
-                    "Rendering with JSX + ES 6",
-                    "2.1 ES6",
-                    "2.2 ES6 (cont'd)",
-                    "2.3 ES6 (cont'd)"
-                ],
+      "title": [
+        "Rendering with JSX + ES 6",
+        "2.1 ES6",
+        "2.2 ES6 (cont'd)",
+        "2.3 ES6 (cont'd)"
+      ],
       "date": "09/05/2024"
     },
     {
@@ -446,13 +501,13 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 3,
-      "title":[
-                    "3.1 Rendering HTML",
-                    "3.2 Creating your own JSX elements",
-                    "3.3 Using JavaScript expressions",
-                    "3.4 Building fragments of JSX",
-                    "LAB 1"
-                ],
+      "title": [
+        "3.1 Rendering HTML",
+        "3.2 Creating your own JSX elements",
+        "3.3 Using JavaScript expressions",
+        "3.4 Building fragments of JSX",
+        "LAB 1"
+      ],
       "date": "13/05/2024"
     },
     {
@@ -461,18 +516,18 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 3,
-      "title":[
-                    "Bootstrap",
-                    "4.1 Bootstrap Introduction",
-                    "- Set up a project with Bootstrap",
-                    "- Configure a web project to use Bootstrap",
-                    "4.2 Bootstrap Grid System",
-                    "4.3 Bootstrap CSS Components",
-                    "- Navigation and Navigation Bar",
-                    "- Icon and Fonts",
-                    "- User Input: Buttons and Forms",
-                    "- Tabular data (Table)"
-                ],
+      "title": [
+        "Bootstrap",
+        "4.1 Bootstrap Introduction",
+        "- Set up a project with Bootstrap",
+        "- Configure a web project to use Bootstrap",
+        "4.2 Bootstrap Grid System",
+        "4.3 Bootstrap CSS Components",
+        "- Navigation and Navigation Bar",
+        "- Icon and Fonts",
+        "- User Input: Buttons and Forms",
+        "- Tabular data (Table)"
+      ],
       "date": "16/05/2024"
     },
     {
@@ -481,12 +536,12 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 3,
-      "title":[
-                    "5.1 Bootstrap JavaScript Components",
-                    "- Tabs, Pills and Tabbed Navigation",
-                    "5.2 Hide and Seek: Collapse and Accordion",
-                    "LAB 2"
-                ],
+      "title": [
+        "5.1 Bootstrap JavaScript Components",
+        "- Tabs, Pills and Tabbed Navigation",
+        "5.2 Hide and Seek: Collapse and Accordion",
+        "LAB 2"
+      ],
       "date": "20/05/2024"
     },
     {
@@ -495,11 +550,11 @@
       "startTime": "07:30",
       "endTime": "09:30",
       "courseID": 3,
-      "title":[
-                    "React-bootstrap",
-                    "7.1 Introduction React-bootstrap",
-                    "7.2 React-Bootstrap Grid System"
-                ],
+      "title": [
+        "React-bootstrap",
+        "7.1 Introduction React-bootstrap",
+        "7.2 React-Bootstrap Grid System"
+      ],
       "date": "23/05/2024"
     },
     {
@@ -508,15 +563,15 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 3,
-      "title":[
-                    "React Component",
-                    "6.1 What's react component? How to build it?",
-                    "6.2 Component Properties",
-                    "6.3 Component State",
-                    "- Setting initial component state",
-                    "- Creating component state",
-                    "- Merging component state"
-                ],
+      "title": [
+        "React Component",
+        "6.1 What's react component? How to build it?",
+        "6.2 Component Properties",
+        "6.3 Component State",
+        "- Setting initial component state",
+        "- Creating component state",
+        "- Merging component state"
+      ],
       "date": "27/05/2024"
     },
     {
@@ -525,12 +580,12 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 3,
-      "title":[
-                    "8.1 Passing property values",
-                    "8.2 Stateless components",
-                    "Container components",
-                    "8.3 Providing and consuming contexLAB 3"
-                ],
+      "title": [
+        "8.1 Passing property values",
+        "8.2 Stateless components",
+        "Container components",
+        "8.3 Providing and consuming contexLAB 3"
+      ],
       "date": "30/05/2024"
     },
     {
@@ -539,12 +594,12 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 3,
-      "title":[
-                    "Getting Started with Hooks",
-                    "9.1 Maintaining state using Hooks",
-                    "9.2 Performing initialization and cleanup actions",
-                    "9.2 Performing initialization and cleanup actions (td)"
-                ],
+      "title": [
+        "Getting Started with Hooks",
+        "9.1 Maintaining state using Hooks",
+        "9.2 Performing initialization and cleanup actions",
+        "9.2 Performing initialization and cleanup actions (td)"
+      ],
       "date": "03/06/2024"
     },
     {
@@ -553,13 +608,13 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 3,
-      "title":[
-                    "10.1 Sharing data using context Hooks",
-                    "10.2 Using reducer Hooks to scale",
-                    "state management",
-                    "LAB 4",
-                    "Progress Test - 01"
-                ],
+      "title": [
+        "10.1 Sharing data using context Hooks",
+        "10.2 Using reducer Hooks to scale",
+        "state management",
+        "LAB 4",
+        "Progress Test - 01"
+      ],
       "date": "06/06/2024"
     },
     {
@@ -568,16 +623,16 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 4,
-      "title":[
-                    "ITERATION 1 (ITER1):",
-                    "Subject introduction",
-                    "Project team building",
-                    "Project environment preparation",
-                    "Subject introduction",
-                    "Project team building",
-                    "Project environment preparation",
-                    "Software analysis & design guides part 1/2"
-                ],
+      "title": [
+        "ITERATION 1 (ITER1):",
+        "Subject introduction",
+        "Project team building",
+        "Project environment preparation",
+        "Subject introduction",
+        "Project team building",
+        "Project environment preparation",
+        "Software analysis & design guides part 1/2"
+      ],
       "date": "06/05/2024"
     },
     {
@@ -586,13 +641,13 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 4,
-      "title":[
-                    "Software analysis & design guides part 1/2",
-                    "Requirement Introduction & Iteration 1 Planning",
-                    "Software analysis & design guides part 2/2",
-                    "Requirement Introduction & Iteration 1 Planning",
-                    "Software analysis & design guides part 2/2"
-                ],
+      "title": [
+        "Software analysis & design guides part 1/2",
+        "Requirement Introduction & Iteration 1 Planning",
+        "Software analysis & design guides part 2/2",
+        "Requirement Introduction & Iteration 1 Planning",
+        "Software analysis & design guides part 2/2"
+      ],
       "date": "09/05/2024"
     },
     {
@@ -601,14 +656,14 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 4,
-      "title":[
-                    "Requirement clarification & software design",
-                    "Physical database design guides",
-                    "Requirement clarification & software design",
-                    "Physical database design guides",
-                    "Requirement clarification & software design",
-                    "Git introduction & guides"
-                ],
+      "title": [
+        "Requirement clarification & software design",
+        "Physical database design guides",
+        "Requirement clarification & software design",
+        "Physical database design guides",
+        "Requirement clarification & software design",
+        "Git introduction & guides"
+      ],
       "date": "13/05/2024"
     },
     {
@@ -617,12 +672,12 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 4,
-      "title":[
-                    "Requirement clarification & software design",
-                    "Git introduction & guides",
-                    "Practice: design, code, self-test, integrate",
-                    "Practice: design, code, self-test, integrate"
-                ],
+      "title": [
+        "Requirement clarification & software design",
+        "Git introduction & guides",
+        "Practice: design, code, self-test, integrate",
+        "Practice: design, code, self-test, integrate"
+      ],
       "date": "16/05/2024"
     },
     {
@@ -631,11 +686,11 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 4,
-      "title":[
-                    "Practice: design, code, self-test, integrate",
-                    "Practice: design, code, self-test, integrate",
-                    "Practice: design, code, self-test, integrate"
-                ],
+      "title": [
+        "Practice: design, code, self-test, integrate",
+        "Practice: design, code, self-test, integrate",
+        "Practice: design, code, self-test, integrate"
+      ],
       "date": "20/05/2024"
     },
     {
@@ -644,11 +699,11 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 4,
-      "title":[
-                    "Practice: design, code, self-test, integrate",
-                    "Iteration1 Review & Iteration2 Planning",
-                    "Iteration1 Review & Iteration2 Planning"
-                ],
+      "title": [
+        "Practice: design, code, self-test, integrate",
+        "Iteration1 Review & Iteration2 Planning",
+        "Iteration1 Review & Iteration2 Planning"
+      ],
       "date": "23/05/2024"
     },
     {
@@ -657,14 +712,14 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 4,
-      "title":[
-                    "ITERATION 2 (ITER2): Requirement clarification",
-                    "Demonstration/Presentation: iter1",
-                    "Requirement clarification",
-                    "Demonstration/Presentation: iter1",
-                    "Requirement clarification",
-                    "Demonstration/Presentation: iter1"
-                ],
+      "title": [
+        "ITERATION 2 (ITER2): Requirement clarification",
+        "Demonstration/Presentation: iter1",
+        "Requirement clarification",
+        "Demonstration/Presentation: iter1",
+        "Requirement clarification",
+        "Demonstration/Presentation: iter1"
+      ],
       "date": "27/05/2024"
     },
     {
@@ -673,14 +728,14 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 4,
-      "title":[
-                    "Requirement clarification",
-                    "Demonstration/Presentation: iter1",
-                    "Requirement clarification",
-                    "Demonstration/Presentation: iter1",
-                    "Requirement clarification",
-                    "Demonstration/Presentation: iter1"
-                ],
+      "title": [
+        "Requirement clarification",
+        "Demonstration/Presentation: iter1",
+        "Requirement clarification",
+        "Demonstration/Presentation: iter1",
+        "Requirement clarification",
+        "Demonstration/Presentation: iter1"
+      ],
       "date": "30/05/2024"
     },
     {
@@ -689,14 +744,14 @@
       "startTime": "07:30",
       "endTime": "09:50",
       "courseID": 4,
-      "title":[
-                    "Demonstration/Presentation: iter1",
-                    "Practice: design, code, self-test, integrate",
-                    "Demonstration/Presentation: iter1",
-                    "Practice: design, code, self-test, integrate",
-                    "Demonstration/Presentation: iter1",
-                    "Practice: design, code, self-test, integrate"
-                ],
+      "title": [
+        "Demonstration/Presentation: iter1",
+        "Practice: design, code, self-test, integrate",
+        "Demonstration/Presentation: iter1",
+        "Practice: design, code, self-test, integrate",
+        "Demonstration/Presentation: iter1",
+        "Practice: design, code, self-test, integrate"
+      ],
       "date": "03/06/2024"
     },
     {
@@ -705,19 +760,15 @@
       "startTime": "10:00",
       "endTime": "12:20",
       "courseID": 4,
-      "title":[
-                    "Demonstration/Presentation: iter1",
-                    "Practice: design, code, self-test, integrate",
-                    "Demonstration/Presentation: iter1",
-                    "Practice: design, code, self-test, integrate",
-                    "Demonstration/Presentation: iter1",
-                    "Practice: design, code, self-test, integrate"
-                ],
+      "title": [
+        "Demonstration/Presentation: iter1",
+        "Practice: design, code, self-test, integrate",
+        "Demonstration/Presentation: iter1",
+        "Practice: design, code, self-test, integrate",
+        "Demonstration/Presentation: iter1",
+        "Practice: design, code, self-test, integrate"
+      ],
       "date": "06/06/2024"
-
     }
-
-
-
   ]
 }
