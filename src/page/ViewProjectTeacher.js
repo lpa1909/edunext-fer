@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import Sidebar from '../Components/Sidebar';
-import Header from '../Components/Header';
+import HeaderTeacher from '../Components/HeaderTeacher';
+import SidebarTeacher from '../Components/SidebarTeacher';
 
 
-const ViewProject = () => {
+const ViewProjectTeacher = () => {
   
   return (
     <div className="app">
-      <Header />
+      <HeaderTeacher />
       <div className="main-content">
-        <Sidebar/>
+        <SidebarTeacher/>
         <div className="content">
             <img src='https://edunext.fpt.edu.vn/assets/box-no-data-KZXFWQlG.png' alt='project'/>
         </div>
@@ -18,4 +18,4 @@ const ViewProject = () => {
   );
 }
 
-export default ViewProject;
+export default ViewProjectTeacher;
